@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عن بَيَان — القصة والفلسفة</title>
+<script>
+  (function() {
+    var t = localStorage.getItem('bayan-theme');
+    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
+    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
+  })();
+</script>
+<meta name="description" content="تعرّف على قصة بَيَان وفلسفتها في بناء القارئ المفكّر من خلال رحلة قرائية عربية متدرّجة ومراجَعة علميًّا.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/bayan.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <clipPath id="horseshoe-arch-clip" clipPathUnits="objectBoundingBox">
+      <path d="M 0.5,0.0 C 0.22,0.0 0.0,0.18 0.0,0.4 C 0.0,0.52 0.08,0.56 0.12,0.58 L 0.12,1.0 L 0.88,1.0 L 0.88,0.58 C 0.92,0.56 1.0,0.52 1.0,0.4 C 1.0,0.18 0.78,0.0 0.5,0.0 Z" />
+    </clipPath>
+  </defs>
+</svg>
+<div class="progress"><span id="prog"></span></div>
+<div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
+
+<header id="head"><div class="wrap bar">
+  <a href="index.html" class="brand"><img src="products-extra-1.png" alt="بَيَان"></a>
+    <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+  <nav class="nav" id="nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html" class="active">عن بَيَان</a>
+    <a href="methodology.html">المنهجية</a>
+    <a href="axes.html">المحتوى والمحاور</a>
+    <a href="platform.html">المنصة</a>
+    <a href="solutions.html">الحلول</a>
+    <a href="reading-vs-literacy.html">القراءة مقابل القرائية</a>
+    <a href="faq.html">الأسئلة الشائعة</a>
+    <a href="contact.html">تواصل</a>
+    <div class="theme-panel" id="themePanel">
+      <button class="theme-btn-opt" data-theme="light" title="الوضع الافتراضي" aria-label="الوضع الافتراضي"></button>
+      <button class="theme-btn-opt" data-theme="sepia" title="الوضع الرملي" aria-label="الوضع الرملي"></button>
+      <button class="theme-btn-opt" data-theme="dark" title="الوضع الداكن" aria-label="الوضع الداكن"></button>
+    </div>
+      <a href="en/about.html" style="font-weight: 700; color: var(--red);">EN</a>
+  </nav>
+  <a href="contact.html" class="btn btn-line head-cta">اطلب عرضًا</a>
+</div></header>
+
+<main>
+<section class="page-hero bg-motif"><div class="wrap">
+  <div class="eyebrow">عن بَيَان</div>
+  <h1><span>القصة والفلسفة</span></h1>
+  <p class="lead">أن نعلّم الطفلَ أن يقرأ شيءٌ، وأن نعلّمه أن يفهم شيءٌ آخر — من هذه الملاحظة البسيطة وُلدت بَيَان.</p>
+</div></section>
+
+<section class="sec bg1"><div class="wrap split">
+  <div class="reveal prose">
+    <span class="tag">قصتنا</span>
+    <p>القرائية هي البوابة الأولى لكلّ تعلّم؛ فالمتعلّم الذي لا يفهم ما يقرأ يتعثّر في كلّ مادة، لا في اللغة وحدها. ومن هنا انطلقت بَيَان: لا لتعليم القراءة فحسب، بل لبناء الفهم الذي تُثمره.</p>
+    <p>بنينا رحلةً قرائيةً متدرّجة، غنيةً بالمعنى، تصل المتعلّم بهويّته وحضارته ومعرفته، وتنقله خطوةً خطوة من فكّ الرموز إلى الفهم والتحليل والنقد والبناء — بمحتوًى يُراجَع علميًّا ويُصان فيه النصّ الأصيل كما ورد.</p>
+  </div>
+  <div class="reveal" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+    <div class="horseshoe-arch-frame" style="max-width: 360px; width: 100%; aspect-ratio: 1/1.2; margin: 0;">
+      <div class="horseshoe-arch-inner">
+        <img src="images/about-manuscript.jpg" onerror="this.remove()" alt="مخطوطة عربية قديمة">
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec bg2"><div class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">مبادئنا</div><h2>ثلاثة مبادئ تحكم كلّ ما نصنع</h2></div>
+  <div class="aud stagger reveal" style="grid-template-columns:repeat(3,1fr)">
+    <div class="acard"><div class="ic">📜</div><h3>صون النصّ الأصيل</h3><p>خاصةً النصوص المقدّسة والتراثية، تُصان كما وردت دون أيّ تعديل.</p></div>
+    <div class="acard"><div class="ic">📈</div><h3>التدرّج</h3><p>مراعاة نموّ المتعلّم المعرفي واللغوي مرحلةً بعد مرحلة، نصًّا ومفرداتٍ وأسلوبًا.</p></div>
+    <div class="acard"><div class="ic">🧭</div><h3>ربط القرائية بالمعنى والهوية</h3><p>فلا تُقرأ الكلمة منفصلةً عن سياقها الثقافي والحضاري.</p></div>
+  </div>
+</div></section>
+
+<section class="sec bg1"><div class="wrap split">
+  <div class="reveal">
+    <div class="eyebrow">الجهة المطوّرة</div>
+    <h2 style="font-size:clamp(1.7rem,3.6vw,2.4rem);margin:14px 0 16px">مجموعة المتحدة للتعليم</h2>
+    <p style="color:var(--body)">تطوّر المنصة مجموعة المتحدة للتعليم اعتمادًا على فريقٍ تربويٍّ ولغويّ. ويخضع كلُّ محتوًى — قبل نشره — لمراجعةٍ علمية متخصّصة تضمن دقّته التربوية واللغوية وملاءمته.</p>
+    <p style="margin-top:22px"><a href="methodology.html" class="btn btn-line">كيف نبني المحتوى ←</a></p>
+  </div>
+  <div class="reveal rigour" style="align-items:flex-start;text-align:start"><div class="seal" style="margin-bottom:4px">✓</div><p style="font-family:'Cairo';font-weight:700;font-size:1.4rem;color:var(--ink);line-height:1.5">«نصونُ النصّ كما وَرَد، ونبني الفهمَ كما يُرام.»</p><div class="by">مراجعةٌ علمية متخصّصة قبل كلّ نشر</div></div>
+</div></section>
+
+<section class="cta bg2"><div class="wrap"><div class="panel reveal">
+  <div><div class="eyebrow">ابدأ الآن</div><h2 style="margin-top:14px">شاركنا بناء جيلٍ يقرأ ليفهم</h2><p>اطلب عرضًا تعريفيًّا لتتعرّف على بَيَان عن قرب.</p></div>
+  <div style="text-align:center"><a href="contact.html" class="btn btn-primary magnetic">اطلب عرضًا تعريفيًّا <span class="arr">←</span></a></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fcols">
+    <div><div class="brand">بَيَان</div><p>منصة القرائية العربية — حين تصبح القراءةُ فهمًا. تطوير مجموعة المتحدة للتعليم.</p></div>
+    <div><h4>استكشف</h4><a href="about.html">عن بَيَان</a><a href="methodology.html">المنهجية</a><a href="axes.html">المحتوى والمحاور</a><a href="platform.html">المنصة</a></div>
+    <div><h4>الحلول</h4><a href="solutions.html">المدارس الخاصة</a><a href="solutions.html">وزارات التعليم</a><a href="solutions.html">المعلمون</a><a href="solutions.html">الطلبة</a></div>
+    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/about.html">English</a>
+  </div>
+  <div class="fcopy"><span>© مجموعة المتحدة للتعليم — جميع الحقوق محفوظة.</span><span>نموذج تصميم — هوية بَيَان</span></div>
+</div></footer>
+<script src="assets/bayan.js"></script>
+</body>
+</html>

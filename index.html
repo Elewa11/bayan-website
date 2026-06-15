@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بَيَان — حين تصبح القراءةُ فهمًا</title>
+<script>
+  (function() {
+    var t = localStorage.getItem('bayan-theme');
+    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
+    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
+  })();
+</script>
+<meta name="description" content="منصة بَيَان للقرائية العربية — رحلة قرائية متدرّجة عبر ستة مستويات تبني القارئ المفكّر.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/bayan.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <clipPath id="horseshoe-arch-clip" clipPathUnits="objectBoundingBox">
+      <path d="M 0.5,0.0 C 0.22,0.0 0.0,0.18 0.0,0.4 C 0.0,0.52 0.08,0.56 0.12,0.58 L 0.12,1.0 L 0.88,1.0 L 0.88,0.58 C 0.92,0.56 1.0,0.52 1.0,0.4 C 1.0,0.18 0.78,0.0 0.5,0.0 Z" />
+    </clipPath>
+  </defs>
+</svg>
+<div class="progress"><span id="prog"></span></div>
+<div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
+
+<header id="head"><div class="wrap bar">
+  <a href="index.html" class="brand"><img src="products-extra-1.png" alt="بَيَان"></a>
+    <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="active">الرئيسية</a>
+    <a href="about.html">عن بَيَان</a>
+    <a href="methodology.html">المنهجية</a>
+    <a href="axes.html">المحتوى والمحاور</a>
+    <a href="platform.html">المنصة</a>
+    <a href="solutions.html">الحلول</a>
+    <a href="reading-vs-literacy.html">القراءة مقابل القرائية</a>
+    <a href="faq.html">الأسئلة الشائعة</a>
+    <a href="contact.html">تواصل</a>
+    <div class="theme-panel" id="themePanel">
+      <button class="theme-btn-opt" data-theme="light" title="الوضع الافتراضي" aria-label="الوضع الافتراضي"></button>
+      <button class="theme-btn-opt" data-theme="sepia" title="الوضع الرملي" aria-label="الوضع الرملي"></button>
+      <button class="theme-btn-opt" data-theme="dark" title="الوضع الداكن" aria-label="الوضع الداكن"></button>
+    </div>
+      <a href="en/index.html" style="font-weight: 700; color: var(--red);">EN</a>
+  </nav>
+  <a href="contact.html" class="btn btn-line head-cta">اطلب عرضًا</a>
+</div></header>
+
+<main>
+<section class="hero-centered bg-motif">
+  <div class="arabesque-rosette"></div>
+  <div class="wrap">
+    <div class="kick">منصة القرائية العربية</div>
+    <h1>حين تصبح القراءةُ <em class="em">فهمًا</em></h1>
+    <p class="sub">رحلةٌ قرائية متدرّجة عبر ستة مستويات — من رياض الأطفال إلى الجامعة — تبني القارئ المفكّر لا الناطق فحسب، بمحتوًى يصل المتعلّم بهويّته وعالمه.</p>
+    <div class="cta-row">
+      <a href="contact.html" class="btn btn-primary magnetic">اطلب عرضًا تعريفيًّا <span class="arr">←</span></a>
+      <a href="methodology.html" class="btn btn-line magnetic">استكشف المنهجية</a>
+    </div>
+    
+    <!-- Premium Shamsa Medallion Showcase -->
+    <div class="shamsa-showcase">
+      <div class="shamsa-ring"></div>
+      <div class="shamsa-ring-outer"></div>
+      <div class="shamsa-inner">
+        <img src="images/hero.jpg" alt="طفل يقرأ كتابًا عربيًّا عند نافذة مُشمسة" onerror="this.remove()">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="features-bar-glass">
+  <div class="pill-wrap">
+    <span>٦ مستويات قرائية متدرّجة</span>
+    <span class="sep"></span>
+    <span>٤ محاور معرفية</span>
+    <span class="sep"></span>
+    <span>مساران: مؤلَّف وأصيل</span>
+    <span class="sep"></span>
+    <span>عربية فصحى مراجَعة علميًّا</span>
+    <span class="sep"></span>
+    <span>من الروضة إلى الجامعة</span>
+  </div>
+</div>
+</div>
+
+<section class="sec bg1" style="padding-block:clamp(54px,8vh,90px)">
+  <div class="wrap stats-octagon stagger reveal">
+    <div class="stat-octagon">
+      <div class="octagon-wrap">
+        <div class="octagon-star"></div>
+        <div class="octagon-star-inner"></div>
+        <div class="num" data-count="6">٠</div>
+      </div>
+      <div class="lbl">مستويات قرائية</div>
+      <div class="sub">من الروضة إلى الجامعة</div>
+    </div>
+    <div class="stat-octagon">
+      <div class="octagon-wrap">
+        <div class="octagon-star"></div>
+        <div class="octagon-star-inner"></div>
+        <div class="num" data-count="4">٠</div>
+      </div>
+      <div class="lbl">محاور معرفية</div>
+      <div class="sub">محلي · حضاري · موضوعي · إسلامي</div>
+    </div>
+    <div class="stat-octagon">
+      <div class="octagon-wrap">
+        <div class="octagon-star"></div>
+        <div class="octagon-star-inner"></div>
+        <div class="num" data-count="10">٠</div>
+      </div>
+      <div class="lbl">أقسام للدرس</div>
+      <div class="sub">من النصّ إلى الأنشطة</div>
+    </div>
+    <div class="stat-octagon">
+      <div class="octagon-wrap">
+        <div class="octagon-star"></div>
+        <div class="octagon-star-inner"></div>
+        <div class="num" data-count="2">٠</div>
+      </div>
+      <div class="lbl">مساران للمحتوى</div>
+      <div class="sub">مؤلَّف وأصيل</div>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto-scroll"><div class="scroll-body reveal">
+  <p>كثيرون يُتقنون <span class="hl">نطق</span> الكلمات،<br>وقليلون يبلغون <span class="hl">معناها</span>.<br>وُجدت بَيَان لتعبر بالمتعلّم هذه الفجوة.</p>
+  <div class="by">— فلسفة بَيَان</div>
+</div></section>
+
+<section class="sec bg1" id="problem"><div class="wrap">
+  <div class="sec-head reveal center" style="text-align:center;margin-bottom:32px">
+    <div class="eyebrow">المشكلة والحل</div>
+    <h2>فجوةٌ بين القراءة والفهم</h2>
+    <p class="lead">يُتقن كثيرٌ من المتعلّمين فكّ رموز الكلمات ونطقها، لكنّهم يعجزون عن فهم ما يقرؤون أو تحليله — وتتفاقم المشكلة بندرة المحتوى القرائيّ العربيّ المتدرّج المبنيّ على أسسٍ علمية.</p>
+  </div>
+  
+  <div class="problem-contrast stagger reveal">
+    <div class="contrast-card challenge">
+      <h3><span>⚠️</span> التحدي والمشكلة</h3>
+      <div class="card-lead">ما يواجهه الميدان التعليمي حالياً:</div>
+      <div class="contrast-list">
+        <div class="contrast-item">
+          <div class="badge-num">١</div>
+          <p><b>قراءةٌ بلا فهم —</b> يقرأ المتعلّم النصّ كاملًا دون أن يبلغ مغزاه أو يحلل دلالاته.</p>
+        </div>
+        <div class="contrast-item">
+          <div class="badge-num">٢</div>
+          <p><b>محتوًى غير مضبوط —</b> المعلّم يؤلّف مادته بنفسه أو يستعير نصوصًا غير خاضعة لمعايير التدرج القرائي.</p>
+        </div>
+        <div class="contrast-item">
+          <div class="badge-num">٣</div>
+          <p><b>انفصالٌ عن الهوية —</b> نصوصٌ مستعارة لا تمسّ عالم المتعلّم الثقافي والحضاري واللغوي.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contrast-card solution">
+      <h3><span>✅</span> الحل من منصة بيان</h3>
+      <div class="card-lead">كيف تعالج منصة بيان هذا التحدي:</div>
+      <div class="contrast-list">
+        <div class="contrast-item">
+          <div class="badge-num">١</div>
+          <p><b>الفهم أولاً —</b> نصوص مصممة خصيصاً لتبني الفهم القرائي، والتحليل، والنقد اللغوي العميق.</p>
+        </div>
+        <div class="contrast-item">
+          <div class="badge-num">٢</div>
+          <p><b>تدرج علمي مراجع —</b> ستة مستويات مبنية على دراسات لغوية متخصصة ومراجعة علمياً بشكل دقيق.</p>
+        </div>
+        <div class="contrast-item">
+          <div class="badge-num">٣</div>
+          <p><b>ارتباط وثيق بالهوية —</b> محتوى غني يربط الطالب بتراثه المحلي، العربي، والإسلامي الأصيل.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p style="margin-top:36px;text-align:center"><a href="reading-vs-literacy.html" class="btn btn-line">القراءة مقابل القرائية ←</a></p>
+</div></section>
+
+<section class="sec bg2" id="axes"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">المحتوى المعرفي</div>
+    <h2>أربعة محاور… نافذةٌ على المعرفة والهوية</h2>
+    <p class="lead">يُعالَج كلُّ موضوعٍ من خلال أربعة محاورٍ متكاملة، فلا يكون النصّ مادةً للقراءة فحسب، بل نافذةً على المعرفة والهوية.</p>
+  </div>
+  
+  <div class="axes-colonnade diamond-grid stagger reveal">
+    <article class="axis-diamond">
+      <div class="diamond-frame">
+        <div class="diamond-img-wrap">
+          <img src="images/axis-local.jpg" alt="المحور المحلي — تراث وهوية">
+        </div>
+      </div>
+      <h3>المحلي</h3>
+      <p>يربط المتعلّم بهويّته القُطرية والعربية: الحضارة والعادات والمعالم والفنون والآداب المحلية.</p>
+    </article>
+    
+    <article class="axis-diamond">
+      <div class="diamond-frame">
+        <div class="diamond-img-wrap">
+          <img src="images/axis-historical.jpg" alt="المحور الحضاري — حضارات كبرى">
+        </div>
+      </div>
+      <h3>الحضاري</h3>
+      <p>نوافذُ على الحضارات الكبرى: العربية الإسلامية والفرعونية والرومانية واليونانية والصينية والهندية.</p>
+    </article>
+    
+    <article class="axis-diamond">
+      <div class="diamond-frame">
+        <div class="diamond-img-wrap">
+          <img src="images/axis-subject.jpg" alt="المحور الموضوعي — علوم ومعرفة">
+        </div>
+      </div>
+      <h3>الموضوعي</h3>
+      <p>معرفةٌ منظَّمة عبر فرعين: العلوم والتقنية (STEM)، والإنسانيات والفنون (HASS).</p>
+    </article>
+    
+    <article class="axis-diamond">
+      <div class="diamond-frame">
+        <div class="diamond-img-wrap">
+          <img src="images/axis-islamic.jpg" alt="المحور الإسلامي — مرجعية أصيلة">
+        </div>
+      </div>
+      <h3>الإسلامي</h3>
+      <p>يصل المتعلّم بمرجعيّته الإسلامية عبر نصوصها الأصيلة: القرآن، الحديث، الفقه، السيرة — وفق ضوابط دقيقة.</p>
+    </article>
+  </div>
+  <p class="reveal center" style="margin-top:32px"><a href="axes.html" class="btn btn-line">المحتوى والمحاور بالتفصيل ←</a></p>
+</div></section>
+
+<section class="sec bg1" id="method"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">المنهجية</div>
+    <h2>ستة مستويات… ومساران للمحتوى</h2>
+    <p class="lead">لا يقتصر التدرّج على طول النصّ، بل يشمل عمق الأفكار وكثافة المفردات ونوع الأسلوب ودرجة الضبط بالشكل.</p>
+  </div>
+  
+  <div class="levels-bookcase reveal">
+    <div class="shelf-books">
+      <div class="book-spine" data-lvl="1" data-title="رياض الأطفال" data-sub="سردي · ضبط كامل">
+        <div class="spine-gold-line top"></div>
+        <div class="spine-num">١</div>
+        <div class="spine-title">رياض الأطفال</div>
+        <div class="spine-gold-line bottom"></div>
+      </div>
+      <div class="book-spine" data-lvl="2" data-title="ابتدائي مبكّر" data-sub="سردي · ضبط كامل">
+        <div class="spine-gold-line top"></div>
+        <div class="spine-num">٢</div>
+        <div class="spine-title">ابتدائي مبكّر</div>
+        <div class="spine-gold-line bottom"></div>
+      </div>
+      <div class="book-spine" data-lvl="3" data-title="ابتدائي" data-sub="سردي · ضبط كامل">
+        <div class="spine-gold-line top"></div>
+        <div class="spine-num">٣</div>
+        <div class="spine-title">ابتدائي</div>
+        <div class="spine-gold-line bottom"></div>
+      </div>
+      <div class="book-spine" data-lvl="4" data-title="إعدادي" data-sub="تفسيري · ضبط أساسي">
+        <div class="spine-gold-line top"></div>
+        <div class="spine-num">٤</div>
+        <div class="spine-title">إعدادي</div>
+        <div class="spine-gold-line bottom"></div>
+      </div>
+      <div class="book-spine" data-lvl="5" data-title="ثانوي" data-sub="تفسيري · ضبط جزئي">
+        <div class="spine-gold-line top"></div>
+        <div class="spine-num">٥</div>
+        <div class="spine-title">ثانوي</div>
+        <div class="spine-gold-line bottom"></div>
+      </div>
+      <div class="book-spine" data-lvl="6" data-title="جامعي" data-sub="حجاجي · ضبط مخفّف">
+        <div class="spine-gold-line top"></div>
+        <div class="spine-num">٦</div>
+        <div class="spine-title">جامعي</div>
+        <div class="spine-gold-line bottom"></div>
+      </div>
+    </div>
+    
+    <div class="book-popover active" id="bookPopover">
+      <div class="book-popover-num" id="popoverNum">١</div>
+      <div class="book-popover-text">
+        <b id="popoverTitle">رياض الأطفال</b>
+        <p id="popoverDesc">سردي · ضبط كامل</p>
+      </div>
+    </div>
+  </div>
+  
+  <p class="reveal center" style="margin-top:34px"><a href="methodology.html" class="btn btn-line">المنهجية كاملةً ←</a></p>
+</div></section>
+
+<section class="sec bg3" id="platform"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">المنصة والمزايا</div>
+    <h2>بيئةٌ رقمية متكاملة تخدم كلّ دور</h2>
+    <p class="lead">المتعلّم يقرأ ويتفاعل، والمعلّم يكلّف ويقيّم ويتابع، والإدارة والوزارة ترصد الأداء على نطاقٍ واسع.</p>
+  </div>
+  
+  <div class="platform-workspace isometric-viewport reveal">
+    <div class="isometric-arch-frame">
+      <div class="arch-viewport-bg">
+        <img src="images/sol-teachers.jpg" alt="لوحة التحكم">
+      </div>
+      <div class="arch-viewport-overlay">
+        <div class="live-mockup" id="mockLesson" style="margin:0;border:none">
+          <div class="mock-browser-bar">
+            <div class="mock-dots"><span></span><span></span><span></span></div>
+            <div class="mock-title">بَيَان — واجهة الدرس القرائي</div>
+          </div>
+          <div class="mock-content" style="padding:15px">
+            <div class="mock-reading-panel">
+              <h4 style="font-size:0.95rem;margin-bottom:8px">منارة المعرفة العربية</h4>
+              <p style="font-size:0.8rem;line-height:1.6">كانت الحضارة العربية الإسلامية <span class="mock-word-hl">منارةً<span class="mock-tooltip">منارةً: مركز إشعاع وهداية فكري وحضاري.</span></span> للعلم، تسعى لربط الفكر بالعمل، وتأسيس <span class="mock-word-hl">الفهم القرائي<span class="mock-tooltip">الفهم القرائي: استخلاص المعاني الضمنية ونقد النصوص.</span></span> كأداة رئيسية <span class="mock-word-hl">لتدبّر<span class="mock-tooltip">لتدبّر: التفكر العميق واستخلاص العبر.</span></span> العلوم واستنتاج الحقائق الكونية.</p>
+            </div>
+            <div class="mock-aside-panel" style="margin-top:10px">
+              <div class="mock-q-card" style="padding:8px">
+                <p style="font-size:0.75rem;margin-bottom:6px">السؤال الأول: ما الغاية الأساسية للفهم القرائي حسب النص؟</p>
+                <div class="mock-option" data-correct style="font-size:0.72rem;padding:6px">ربط الفكر بالعمل وتدبر المعاني</div>
+                <div class="mock-option" style="font-size:0.72rem;padding:6px">حفظ ونطق الكلمات بسرعة</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="feat stagger reveal">
+      <div class="f"><div class="ic">👥</div><h3>حسابات حسب الدور</h3><p>طالب، معلّم، إدارة، وزارة — كلٌّ بصلاحياته وواجهته.</p></div>
+      <div class="f"><div class="ic">📊</div><h3>لوحات وتقارير</h3><p>تتبّع التقدّم، أداء الصفوف، وتقارير تجميعية قابلة للتصدير.</p></div>
+      <div class="f"><div class="ic">🔗</div><h3>تكامل ووصول</h3><p>تكامل LMS، دخول موحّد SSO، واستجابة كاملة للأجهزة وإتاحة.</p></div>
+    </div>
+  </div>
+  <p class="reveal center" style="margin-top:18px"><a href="platform.html" class="btn btn-line">المنصة والمزايا ←</a></p>
+</div></section>
+
+<section class="sec bg1" id="audiences"><div class="wrap">
+  <div class="sec-head reveal center" style="text-align:center;margin-bottom:36px">
+    <div class="eyebrow">لمن بَيَان؟</div>
+    <h2>حلٌّ لكلّ شريكٍ في العملية التعليمية</h2>
+  </div>
+  
+  <div class="solutions-wood stagger reveal">
+    <div class="tablet-card">
+      <div class="ic">🏫</div>
+      <h3>المدارس الخاصة</h3>
+      <p>منهجٌ قرائيٌّ متدرّج جاهز يرفع النتائج ويتكامل مع منهجك القائم.</p>
+      <a class="more" href="solutions.html">اقرأ المزيد ←</a>
+    </div>
+    <div class="tablet-card">
+      <div class="ic">🏛️</div>
+      <h3>وزارات التعليم</h3>
+      <p>حلٌّ منهجيٌّ قابل للتوسّع يُواءَم مع المراحل الوطنية بمعايير موحّدة.</p>
+      <a class="more" href="solutions.html">اقرأ المزيد ←</a>
+    </div>
+    <div class="tablet-card">
+      <div class="ic">👩‍🏫</div>
+      <h3>المعلمون</h3>
+      <p>محتوًى جاهز وتصحيحٌ تلقائي، فيتفرّغ المعلّم لتوجيه الفهم.</p>
+      <a class="more" href="solutions.html">اقرأ المزيد ←</a>
+    </div>
+    <div class="tablet-card">
+      <div class="ic">🎓</div>
+      <h3>الطلبة</h3>
+      <p>رحلةٌ بمستواهم تمامًا، ومحتوًى يربطهم بهويّتهم، وشخصيةٌ مُلهمة.</p>
+      <a class="more" href="solutions.html">اقرأ المزيد ←</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="manifesto bg3"><div class="wrap reveal rigour">
+  <div class="seal">✓</div>
+  <p style="font-size:clamp(1.4rem,3.2vw,2.3rem)">«نصونُ النصّ كما وَرَد،<br>ونبني الفهمَ كما يُرام.»</p>
+  <div class="by">مراجعةٌ علمية متخصّصة قبل كلّ نشر</div>
+</div></section>
+
+<section class="cta-mihrab" id="cta"><div class="wrap">
+  <div class="mihrab-frame reveal">
+    <div>
+      <div class="eyebrow">ابدأ الآن</div>
+      <h2 style="margin-top:14px;font-family:var(--font-serif)">ابدأ ببناء جيلٍ<br>يقرأ ليفهم</h2>
+      <p style="margin-top:16px;color:var(--body)">اطلب عرضًا تعريفيًّا، فيتواصل الفريق لتحديد احتياج جهتك وتجهيز تجربةٍ مناسبة.</p>
+      <p style="margin-top:22px"><a href="contact.html" class="btn btn-primary magnetic">اطلب عرضًا تعريفيًّا <span class="arr">←</span></a></p>
+    </div>
+    <div class="horseshoe-arch-frame">
+      <div class="horseshoe-arch-inner">
+        <img src="images/personalities.jpg" onerror="this.remove()" alt="شخصيات تعليمية ملهمة">
+      </div>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fcols">
+    <div><div class="brand">بَيَان</div><p>منصة القرائية العربية — حين تصبح القراءةُ فهمًا. تطوير مجموعة المتحدة للتعليم.</p></div>
+    <div><h4>استكشف</h4><a href="about.html">عن بَيَان</a><a href="methodology.html">المنهجية</a><a href="axes.html">المحتوى والمحاور</a><a href="platform.html">المنصة</a></div>
+    <div><h4>الحلول</h4><a href="solutions.html">المدارس الخاصة</a><a href="solutions.html">وزارات التعليم</a><a href="solutions.html">المعلمون</a><a href="solutions.html">الطلبة</a></div>
+    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/index.html">English</a>
+  </div>
+  <div class="fcopy"><span>© مجموعة المتحدة للتعليم — جميع الحقوق محفوظة.</span><span>نموذج تصميم — هوية بَيَان</span></div>
+</div></footer>
+
+<script src="assets/bayan.js"></script>
+</body>
+</html>

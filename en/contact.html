@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Demo — Bayan</title>
+<script>
+  (function() {
+    var t = localStorage.getItem('bayan-theme');
+    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
+    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
+  })();
+</script>
+<meta name="description" content="Contact the Bayan team and request a customized demo for your educational institution.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/bayan.css">
+</head>
+<body>
+<div class="progress"><span id="prog"></span></div>
+<div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
+
+<header id="head"><div class="wrap bar">
+  <a href="index.html" class="brand"><img src="../products-extra-1.png" alt="Bayan"></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <nav class="nav" id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Bayan</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="axes.html">Content &amp; Axes</a>
+    <a href="platform.html">Platform</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="reading-vs-literacy.html">Reading vs Literacy</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html" class="active">Contact</a>
+    <div class="theme-panel" id="themePanel">
+      <button class="theme-btn-opt" data-theme="light" title="Default Theme" aria-label="Default Theme"></button>
+      <button class="theme-btn-opt" data-theme="sepia" title="Sepia Theme" aria-label="Sepia Theme"></button>
+      <button class="theme-btn-opt" data-theme="dark" title="Dark Theme" aria-label="Dark Theme"></button>
+    </div>
+    <a href="../contact.html" style="font-weight: 700; color: var(--red);">عربي</a>
+  </nav>
+  <a href="contact.html" class="btn btn-line head-cta active">Request a Demo</a>
+</div></header>
+
+<main>
+<section class="page-hero bg-motif"><div class="wrap">
+  <div class="eyebrow">Contact</div>
+  <h1><span>Request a Demo</span></h1>
+  <p class="lead">Fill out the form, and our team will get in touch to assess your entity's needs and prepare an appropriate trial experience.</p>
+</div></section>
+
+<section class="sec bg1"><div class="wrap split">
+  <div class="reveal">
+    <div class="eyebrow">Why Bayan</div>
+    <h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin:14px 0 18px">Build a Generation That Reads to Understand</h2>
+    <div class="problem-list">
+      <div class="it"><span class="mk">✓</span><p>A ready, progressive reading curriculum structured across six levels.</p></div>
+      <div class="it"><span class="mk">✓</span><p>Scientifically reviewed content connecting reading to identity and knowledge.</p></div>
+      <div class="it"><span class="mk">✓</span><p>Dashboards and reports tracking performance at the class, school, and system levels.</p></div>
+    </div>
+  </div>
+  <form class="form reveal" onsubmit="return false" aria-label="Demo Request Form">
+    <input type="text" placeholder="Full Name" aria-label="Full Name">
+    <input type="text" placeholder="Organization / Institution" aria-label="Organization">
+    <select aria-label="Organization Type">
+      <option>Organization Type</option>
+      <option>Private School</option>
+      <option>Ministry of Education</option>
+      <option>Teacher</option>
+      <option>Other</option>
+    </select>
+    <input type="email" placeholder="Email Address" aria-label="Email Address">
+    <textarea rows="4" placeholder="Your message (Optional)" aria-label="Your message"></textarea>
+    <button class="btn btn-primary magnetic">Submit Request <span class="arr">→</span></button>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fcols">
+    <div><div class="brand">Bayan</div><p>Arabic Literacy Platform — Where reading becomes understanding. Developed by Integrated Education Solutions (IES).</p></div>
+    <div><h4>Explore</h4><a href="about.html">About Bayan</a><a href="methodology.html">Methodology</a><a href="axes.html">Content &amp; Axes</a><a href="platform.html">Platform</a></div>
+    <div><h4>Solutions</h4><a href="solutions.html">Private Schools</a><a href="solutions.html">Ministries</a><a href="solutions.html">Teachers</a><a href="solutions.html">Students</a></div>
+    <div><h4>Contact</h4><a href="contact.html">Request a Demo</a><a href="reading-vs-literacy.html">Reading vs Literacy</a><a href="faq.html">FAQ</a><a href="../contact.html">عربي</a>
+  </div>
+  <div class="fcopy"><span>© Integrated Education Solutions — All rights reserved.</span><span>Design Prototype — Bayan Identity</span></div>
+</div></footer>
+<script src="../assets/bayan.js"></script>
+</body>
+</html>

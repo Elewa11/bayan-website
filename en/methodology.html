@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology — Bayan</title>
+<script>
+  (function() {
+    var t = localStorage.getItem('bayan-theme');
+    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
+    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
+  })();
+</script>
+<meta name="description" content="Bayan's scientific methodology — six progressive reading levels and two content tracks building comprehension from kindergarten to university.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/bayan.css">
+</head>
+<body>
+<div class="progress"><span id="prog"></span></div>
+<div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
+
+<header id="head"><div class="wrap bar">
+  <a href="index.html" class="brand"><img src="../products-extra-1.png" alt="Bayan"></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <nav class="nav" id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Bayan</a>
+    <a href="methodology.html" class="active">Methodology</a>
+    <a href="axes.html">Content &amp; Axes</a>
+    <a href="platform.html">Platform</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="reading-vs-literacy.html">Reading vs Literacy</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <div class="theme-panel" id="themePanel">
+      <button class="theme-btn-opt" data-theme="light" title="Default Theme" aria-label="Default Theme"></button>
+      <button class="theme-btn-opt" data-theme="sepia" title="Sepia Theme" aria-label="Sepia Theme"></button>
+      <button class="theme-btn-opt" data-theme="dark" title="Dark Theme" aria-label="Dark Theme"></button>
+    </div>
+  
+    <a href="../methodology.html" style="font-weight: 700; color: var(--red);">عربي</a>
+  </nav>
+  <a href="contact.html" class="btn btn-line head-cta">Request a Demo</a>
+</div></header>
+
+<main>
+<section class="page-hero bg-motif"><div class="wrap">
+  <div class="eyebrow">Methodology</div>
+  <h1><span>How We Build the Thinking Reader</span></h1>
+  <p class="lead">Six reading levels, two content tracks, and a ten-step lesson structure—an educational engineering that transitions the learner from text to understanding.</p>
+</div></section>
+
+<section class="sec bg1"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">Levels</div>
+    <h2>Six Reading Levels</h2>
+    <p class="lead">Progression is not limited to text length, but encompasses depth of ideas, vocabulary density, sentence complexity, and the level of diacritization (tashkeel).</p>
+  </div>
+    <div class="levels stagger reveal">
+    <div class="lvl">
+      <div class="n">I</div>
+      <div class="lvl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12 M12 12C12 9 10 7 7 7 M12 14C12 11 14 9 17 9"/></svg></div>
+      <b>Kindergarten</b>
+      <small>Narrative · Full Tashkeel</small>
+    </div>
+    <div class="lvl">
+      <div class="n">II</div>
+      <div class="lvl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+      <b>Early Elementary</b>
+      <small>Narrative · Full Tashkeel</small>
+    </div>
+    <div class="lvl">
+      <div class="n">III</div>
+      <div class="lvl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .5 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5 M9 18h6 M10 22h4"/></svg></div>
+      <b>Elementary</b>
+      <small>Narrative · Full Tashkeel</small>
+    </div>
+    <div class="lvl">
+      <div class="n">IV</div>
+      <div class="lvl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9 M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
+      <b>Middle School</b>
+      <small>Expository · Basic Tashkeel</small>
+    </div>
+    <div class="lvl">
+      <div class="n">V</div>
+      <div class="lvl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20 M2 12h20"/></svg></div>
+      <b>High School</b>
+      <small>Expository · Partial Tashkeel</small>
+    </div>
+    <div class="lvl">
+      <div class="n">VI</div>
+      <div class="lvl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5zM6 12v5c0 2 2.5 3 6 3s6-1 6-3v-5"/></svg></div>
+      <b>University</b>
+      <small>Argumentative · Reduced Tashkeel</small>
+    </div>
+  </div><p class="reveal" style="color:var(--muted);font-style:italic;margin-top:24px">Note: Quranic texts remain fully diacritized exactly as written in their original source, without any reduction in any level.</p>
+</div></section>
+
+<section class="sec bg2"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">Tracks</div>
+    <h2>Two Complementary Content Tracks</h2>
+  </div>
+  <div class="tracks stagger reveal">
+    <div class="track"><div class="tn">TRACK 01</div><h3>Generative Track</h3><p>Pedagogically authored content that addresses a single thematic topic across all six levels under a unified cognitive framework. The text's depth, vocabulary, and style are tailored to fit the learner's developmental stage.</p></div>
+    <div class="track"><div class="tn">TRACK 02</div><h3>Authentic Track</h3><p>Documented original source texts (Quran, Hadith, classical poetry, prose, and tales) studied in a single-level lesson chosen by experts, preserving the text exactly as written in its source without modifications.</p></div>
+  </div>
+</div></section>
+
+<section class="manifesto bg3"><div class="wrap reveal">
+  <p>From text to <span class="hl">understanding</span>,<br>via a structured layout that leaves nothing to chance.</p>
+  <div class="by">— Bayan Lesson Philosophy</div>
+</div></section>
+
+<section class="sec bg1"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="eyebrow">Lesson Structure</div>
+    <h2>The Authentic Lesson in Ten Sections</h2>
+    <p class="lead">A progressive journey that takes the learner from encountering the text to comprehending, analyzing, and synthesizing it.</p>
+  </div>
+  <div class="lesson stagger reveal">
+    <div class="lcell"><div class="ln">1</div><b>Original Text</b></div>
+    <div class="lcell"><div class="ln">2</div><b>Diacritized Text</b></div>
+    <div class="lcell"><div class="ln">3</div><b>Pre-Reading Questions</b></div>
+    <div class="lcell"><div class="ln">4</div><b>Vocabulary &amp; Usage</b></div>
+    <div class="lcell"><div class="ln">5</div><b>Grammar &amp; Syntax</b></div>
+    <div class="lcell"><div class="ln">6</div><b>Linguistic Styles</b></div>
+    <div class="lcell"><div class="ln">7</div><b>Rhetorical Analysis</b></div>
+    <div class="lcell"><div class="ln">8</div><b>Text Structure</b></div>
+    <div class="lcell"><div class="ln">9</div><b>Post-Assessment</b></div>
+    <div class="lcell"><div class="ln">10</div><b>Applied Activities</b></div>
+  </div>
+</div></section>
+
+<section class="cta bg2"><div class="wrap"><div class="panel reveal">
+  <div><div class="eyebrow">Try It</div><h2 style="margin-top:14px">See a Live Lesson in Action</h2><p>Request a demo and let our team walk you through the lesson structure inside the platform.</p></div>
+  <div style="text-align:center"><a href="contact.html" class="btn btn-primary magnetic">Request a Demo <span class="arr">→</span></a></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fcols">
+    <div><div class="brand">Bayan</div><p>Arabic Literacy Platform — Where reading becomes understanding. Developed by Integrated Education Solutions (IES).</p></div>
+    <div><h4>Explore</h4><a href="about.html">About Bayan</a><a href="methodology.html">Methodology</a><a href="axes.html">Content &amp; Axes</a><a href="platform.html">Platform</a></div>
+    <div><h4>Solutions</h4><a href="solutions.html">Private Schools</a><a href="solutions.html">Ministries</a><a href="solutions.html">Teachers</a><a href="solutions.html">Students</a></div>
+    <div><h4>Contact</h4><a href="contact.html">Request a Demo</a><a href="reading-vs-literacy.html">Reading vs Literacy</a><a href="faq.html">FAQ</a><a href="../methodology.html">عربي</a>
+  </div>
+  <div class="fcopy"><span>© Integrated Education Solutions — All rights reserved.</span><span>Design Prototype — Bayan Identity</span></div>
+</div></footer>
+<script src="../assets/bayan.js"></script>
+</body>
+</html>

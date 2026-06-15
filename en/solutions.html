@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solutions — Bayan</title>
+<script>
+  (function() {
+    var t = localStorage.getItem('bayan-theme');
+    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
+    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
+  })();
+</script>
+<meta name="description" content="Bayan solutions for private schools, ministries of education, teachers, and students — a progressive reading curriculum that integrates with yours.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/bayan.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <clipPath id="horseshoe-arch-clip" clipPathUnits="objectBoundingBox">
+      <path d="M 0.5,0.0 C 0.22,0.0 0.0,0.18 0.0,0.4 C 0.0,0.52 0.08,0.56 0.12,0.58 L 0.12,1.0 L 0.88,1.0 L 0.88,0.58 C 0.92,0.56 1.0,0.52 1.0,0.4 C 1.0,0.18 0.78,0.0 0.5,0.0 Z" />
+    </clipPath>
+  </defs>
+</svg>
+<div class="progress"><span id="prog"></span></div>
+<div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
+
+<header id="head"><div class="wrap bar">
+  <a href="index.html" class="brand"><img src="../products-extra-1.png" alt="Bayan"></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <nav class="nav" id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Bayan</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="axes.html">Content &amp; Axes</a>
+    <a href="platform.html">Platform</a>
+    <a href="solutions.html" class="active">Solutions</a>
+    <a href="reading-vs-literacy.html">Reading vs Literacy</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <div class="theme-panel" id="themePanel">
+      <button class="theme-btn-opt" data-theme="light" title="Default Theme" aria-label="Default Theme"></button>
+      <button class="theme-btn-opt" data-theme="sepia" title="Sepia Theme" aria-label="Sepia Theme"></button>
+      <button class="theme-btn-opt" data-theme="dark" title="Dark Theme" aria-label="Dark Theme"></button>
+    </div>
+  
+    <a href="../solutions.html" style="font-weight: 700; color: var(--red);">عربي</a>
+  </nav>
+  <a href="contact.html" class="btn btn-line head-cta">Request a Demo</a>
+</div></header>
+
+<main>
+<section class="page-hero bg-motif"><div class="wrap">
+  <div class="eyebrow">Solutions</div>
+  <h1><span>Bayan for Every Audience</span></h1>
+  <p class="lead">Every educational partner has a unique need—Bayan addresses each with a customized message and dedicated tools.</p>
+</div></section>
+
+<section class="sec bg1"><div class="wrap">
+  <div class="split reveal" style="margin-bottom:30px">
+    <div><div class="eyebrow">For Private Schools</div><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin:12px 0">Excellence and Outcomes Combined</h2><p style="color:var(--body)">Private schools seek both what distinguishes them and what elevates their student outcomes—and low literacy is one of the parents' top concerns.</p>
+      <div class="problem-list">
+        <div class="it"><span class="mk">✓</span><p>A ready, progressive reading curriculum that saves the trouble of authoring and level-grading.</p></div>
+        <div class="it"><span class="mk">✓</span><p>Integrates with your existing curriculum rather than crowding it.</p></div>
+        <div class="it"><span class="mk">✓</span><p>Dashboards that show the progress of each class and student, making literacy a marketing advantage.</p></div>
+      </div></div>
+    <div class="imgslot" style="aspect-ratio:3/2;border-radius:16px"><img src="../images/sol-schools.jpg" alt="Modern private school building"></div>
+  </div>
+  <div class="split reveal" style="margin-bottom:30px">
+    <div class="imgslot" style="aspect-ratio:3/2;border-radius:16px"><img src="../images/sol-ministry.jpg" alt="Ministry of Education monitoring performance"></div>
+    <div><div class="eyebrow">For Ministries of Education</div><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin:12px 0">A System-Wide Solution</h2><p style="color:var(--body)">Low literacy is a challenge facing the entire educational system, difficult to address with scattered solutions or inconsistent content. Bayan offers a scalable, systematic solution aligned with national framework stages, linking literacy to identity, civilization, knowledge, and Islamic reference—with aggregated dashboards and unified metrics to measure literacy on a large scale.</p></div>
+  </div>
+  <div class="split reveal" style="margin-bottom:30px">
+    <div><div class="eyebrow">For Teachers</div><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin:12px 0">Lifts the Prep Burden off You</h2><p style="color:var(--body)">Arabic teachers spend significant time preparing materials, level-grading them, and grading assessments. Bayan relieves you of this burden: ready-made scientifically grounded content, clear lesson structuring from text to activities, automated grading for post-tests, and flexible assignment and tracking tools—so teachers can dedicate themselves to what they do best: teaching and guiding comprehension.</p></div>
+    <div class="imgslot" style="aspect-ratio:3/2;border-radius:16px"><img src="../images/sol-teachers.jpg" alt="Teacher helping a student in classroom"></div>
+  </div>
+  <div class="split reveal">
+    <div class="imgslot" style="aspect-ratio:3/2;border-radius:16px"><img src="../images/sol-students.jpg" alt="Students reading and learning together"></div>
+    <div><div class="eyebrow">For Students</div><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin:12px 0">A Journey Tailored to Your Level</h2><p style="color:var(--body)">Students get frustrated when faced with a text above their level, bored when it is below, and detached from reading when it does not touch their world. Bayan offers you a reading journey precisely at your level, with rich content connecting you to your identity, civilization, and cognitive world, while pairing each topic with an inspiring role model makes learning feel closer to a story.</p>
+      <div class="ministat"><b>6</b><span>Levels that align perfectly with every student's reading level</span></div></div>
+  </div>
+</div></section>
+
+<section class="cta bg2"><div class="wrap"><div class="panel reveal">
+  <div><div class="eyebrow">Get Started</div><h2 style="margin-top:14px">Which partner are you? We have a solution for you</h2><p>Request a demo and our team will get in touch with a customized message for your entity.</p></div>
+  <div style="text-align:center"><a href="contact.html" class="btn btn-primary magnetic">Request a Demo <span class="arr">→</span></a></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fcols">
+    <div><div class="brand">Bayan</div><p>Arabic Literacy Platform — Where reading becomes understanding. Developed by Integrated Education Solutions (IES).</p></div>
+    <div><h4>Explore</h4><a href="about.html">About Bayan</a><a href="methodology.html">Methodology</a><a href="axes.html">Content &amp; Axes</a><a href="platform.html">Platform</a></div>
+    <div><h4>Solutions</h4><a href="solutions.html">Private Schools</a><a href="solutions.html">Ministries</a><a href="solutions.html">Teachers</a><a href="solutions.html">Students</a></div>
+    <div><h4>Contact</h4><a href="contact.html">Request a Demo</a><a href="reading-vs-literacy.html">Reading vs Literacy</a><a href="faq.html">FAQ</a><a href="../solutions.html">عربي</a>
+  </div>
+  <div class="fcopy"><span>© Integrated Education Solutions — All rights reserved.</span><span>Design Prototype — Bayan Identity</span></div>
+</div></footer>
+<script src="../assets/bayan.js"></script>
+</body>
+</html>

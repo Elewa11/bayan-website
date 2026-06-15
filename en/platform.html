@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platform &amp; Features — Bayan</title>
+<script>
+  (function() {
+    var t = localStorage.getItem('bayan-theme');
+    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
+    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
+  })();
+</script>
+<meta name="description" content="Bayan's digital platform — an integrated environment with role-based accounts for students, teachers, administrators, and ministries.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/bayan.css">
+</head>
+<body>
+<div class="progress"><span id="prog"></span></div>
+<div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
+
+<header id="head"><div class="wrap bar">
+  <a href="index.html" class="brand"><img src="../products-extra-1.png" alt="Bayan"></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <nav class="nav" id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Bayan</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="axes.html">Content &amp; Axes</a>
+    <a href="platform.html" class="active">Platform</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="reading-vs-literacy.html">Reading vs Literacy</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <div class="theme-panel" id="themePanel">
+      <button class="theme-btn-opt" data-theme="light" title="Default Theme" aria-label="Default Theme"></button>
+      <button class="theme-btn-opt" data-theme="sepia" title="Sepia Theme" aria-label="Sepia Theme"></button>
+      <button class="theme-btn-opt" data-theme="dark" title="Dark Theme" aria-label="Dark Theme"></button>
+    </div>
+  
+    <a href="../platform.html" style="font-weight: 700; color: var(--red);">عربي</a>
+  </nav>
+  <a href="contact.html" class="btn btn-line head-cta">Request a Demo</a>
+</div></header>
+
+<main>
+<section class="page-hero bg-motif"><div class="wrap">
+  <div class="eyebrow">Platform &amp; Features</div>
+  <h1><span>An Integrated Digital Environment</span></h1>
+  <p class="lead">Bayan does not just deliver content; it integrates it within an environment serving every role: learners read and interact, teachers assign and track, while school administrations and ministries monitor performance at scale.</p>
+</div></section>
+
+<section class="sec bg1"><div class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">Role-Based Accounts</div><h2>Dedicated interfaces and permissions for every role</h2></div>
+  <div class="reveal"><table class="cmp-table">
+    <thead><tr><th>Role</th><th>Key actions inside the platform</th></tr></thead>
+    <tbody>
+      <tr><td>Student</td><td>Enters the reading library at their level, reads and interacts with vocabulary and analysis, performs activities and tests, and tracks their progress across levels.</td></tr>
+      <tr><td>Teacher</td><td>Selects and assigns texts, grades essay answers and leaves feedback, views their class performance dashboard, and aligns content with their curriculum.</td></tr>
+      <tr><td>School Admin</td><td>Monitors class and teacher performance, tracks progress against department goals, and manages accounts and subscriptions.</td></tr>
+      <tr><td>Ministry / Entity</td><td>Views aggregated dashboards across schools, and measures Arabic literacy using unified national standards.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="sec bg2"><div class="wrap">
+  <div class="platform-show">
+    <div class="imgslot has-mockup reveal par" data-speed="0.04">
+      <div class="live-mockup" id="mockLesson">
+        <div class="mock-browser-bar">
+          <div class="mock-dots"><span></span><span></span><span></span></div>
+          <div class="mock-title">Bayan — Interactive Reading Lesson</div>
+        </div>
+        <div class="mock-content">
+          <div class="mock-reading-panel">
+            <h4>Beacon of Arabic Knowledge</h4>
+            <p>The Arab-Islamic civilization was a <span class="mock-word-hl">beacon<span class="mock-tooltip">Beacon: A center of intellectual and civilizational radiation.</span></span> of knowledge, seeking to connect thought with action, and establishing <span class="mock-word-hl">reading comprehension<span class="mock-tooltip">Reading Comprehension: Extracting implicit meanings and critiquing texts.</span></span> as a primary tool to <span class="mock-word-hl">contemplate<span class="mock-tooltip">Contemplate: Deep thinking and deriving lessons from texts.</span></span> cosmic facts.</p>
+          </div>
+          <div class="mock-aside-panel">
+            <div class="mock-q-card">
+              <p>Q1: What is the primary goal of reading comprehension according to the text?</p>
+              <div class="mock-option" data-correct>Connecting thought with action and contemplating meanings</div>
+              <div class="mock-option">Memorizing and pronouncing words quickly</div>
+              <div class="mock-option">Only copying historical manuscripts</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="feat stagger reveal">
+      <div class="f"><div class="ic">📊</div><h3>Analytics &amp; Reports</h3><p>Student dashboards for their path across levels, teacher dashboards for individual and class performance, and administrative/ministry aggregate reports supporting data-driven decisions.</p></div>
+      <div class="f"><div class="ic">🔗</div><h3>Integration &amp; Access</h3><p>Integration with school LMS platforms and digital classroom tools, Single Sign-On (SSO) support, and a fully responsive layout across desktop, tablet, and mobile devices.</p></div>
+    </div>
+  </div>
+  <div class="platform-show rev">
+    <div class="feat stagger reveal">
+      <div class="f"><div class="ic">🛡️</div><h3>Academic Rigor</h3><p>Every piece of content undergoes specialized academic review before publication, ensuring sacred and classical heritage texts are preserved intact.</p></div>
+      <div class="f"><div class="ic">♿</div><h3>Accessibility &amp; Inclusion</h3><p>Accessibility features supporting screen readers, keyboard navigation, and alternative text for all visual elements.</p></div>
+    </div>
+    <div class="imgslot has-mockup reveal par" data-speed="0.04">
+      <div class="live-mockup" id="mockDashboard">
+        <div class="mock-browser-bar">
+          <div class="mock-dots"><span></span><span></span><span></span></div>
+          <div class="mock-title">Teacher Dashboard — Bayan</div>
+        </div>
+        <div class="mock-dash-content">
+          <div class="mock-roster">
+            <h4>Students Roster</h4>
+            <div class="mock-student-row active" data-progress="82" data-read="12" data-score="88" data-chart="40,65,70,82,88">
+              <span class="mock-student-name">Ahmed Abdullah</span>
+              <div class="mock-student-bar"><div class="mock-student-progress" style="width: 82%"></div></div>
+            </div>
+            <div class="mock-student-row" data-progress="94" data-read="16" data-score="96" data-chart="60,75,85,90,96">
+              <span class="mock-student-name">Fatima Omar</span>
+              <div class="mock-student-bar"><div class="mock-student-progress" style="width: 94%"></div></div>
+            </div>
+            <div class="mock-student-row" data-progress="68" data-read="9" data-score="72" data-chart="30,45,55,62,72">
+              <span class="mock-student-name">Khaled Mansoor</span>
+              <div class="mock-student-bar"><div class="mock-student-progress" style="width: 68%"></div></div>
+            </div>
+          </div>
+          <div class="mock-detail-panel">
+            <h4 class="mock-detail-name">Ahmed Abdullah</h4>
+            <div class="mock-chart-container">
+              <div class="mock-chart-bar" style="height: 40%" data-val="40"></div>
+              <div class="mock-chart-bar" style="height: 65%" data-val="65"></div>
+              <div class="mock-chart-bar" style="height: 70%" data-val="70"></div>
+              <div class="mock-chart-bar" style="height: 82%" data-val="82"></div>
+              <div class="mock-chart-bar" style="height: 88%" data-val="88"></div>
+            </div>
+            <div class="mock-stat-grid">
+              <div class="mock-mini-card">
+                <div>Literacy</div>
+                <div class="mock-detail-prog">82%</div>
+              </div>
+              <div class="mock-mini-card">
+                <div>Comprehension</div>
+                <div class="mock-detail-score">88%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="cta bg1"><div class="wrap"><div class="panel reveal">
+  <div><div class="eyebrow">Platform Tour</div><h2 style="margin-top:14px">Request a live platform demonstration</h2><p>Our team will guide you through the dashboards, roles, and reports in a tour customized for your institution.</p></div>
+  <div style="text-align:center"><a href="contact.html" class="btn btn-primary magnetic">Request a Demo <span class="arr">→</span></a></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fcols">
+    <div><div class="brand">Bayan</div><p>Arabic Literacy Platform — Where reading becomes understanding. Developed by Integrated Education Solutions (IES).</p></div>
+    <div><h4>Explore</h4><a href="about.html">About Bayan</a><a href="methodology.html">Methodology</a><a href="axes.html">Content &amp; Axes</a><a href="platform.html">Platform</a></div>
+    <div><h4>Solutions</h4><a href="solutions.html">Private Schools</a><a href="solutions.html">Ministries</a><a href="solutions.html">Teachers</a><a href="solutions.html">Students</a></div>
+    <div><h4>Contact</h4><a href="contact.html">Request a Demo</a><a href="reading-vs-literacy.html">Reading vs Literacy</a><a href="faq.html">FAQ</a><a href="../platform.html">عربي</a>
+  </div>
+  <div class="fcopy"><span>© Integrated Education Solutions — All rights reserved.</span><span>Design Prototype — Bayan Identity</span></div>
+</div></footer>
+<script src="../assets/bayan.js"></script>
+</body>
+</html>

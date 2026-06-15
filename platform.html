@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المنصة والمزايا — بَيَان</title>
+<script>
+  (function() {
+    var t = localStorage.getItem('bayan-theme');
+    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
+    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
+  })();
+</script>
+<meta name="description" content="منصة بَيَان الرقمية — بيئة متكاملة بحسابات للطالب والمعلّم والإدارة والوزارة مع لوحات تحكّم وتقارير.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/bayan.css">
+</head>
+<body>
+<div class="progress"><span id="prog"></span></div>
+<div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
+
+<header id="head"><div class="wrap bar">
+  <a href="index.html" class="brand"><img src="products-extra-1.png" alt="بَيَان"></a>
+    <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+  <nav class="nav" id="nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">عن بَيَان</a>
+    <a href="methodology.html">المنهجية</a>
+    <a href="axes.html">المحتوى والمحاور</a>
+    <a href="platform.html" class="active">المنصة</a>
+    <a href="solutions.html">الحلول</a>
+    <a href="reading-vs-literacy.html">القراءة مقابل القرائية</a>
+    <a href="faq.html">الأسئلة الشائعة</a>
+    <a href="contact.html">تواصل</a>
+    <div class="theme-panel" id="themePanel">
+      <button class="theme-btn-opt" data-theme="light" title="الوضع الافتراضي" aria-label="الوضع الافتراضي"></button>
+      <button class="theme-btn-opt" data-theme="sepia" title="الوضع الرملي" aria-label="الوضع الرملي"></button>
+      <button class="theme-btn-opt" data-theme="dark" title="الوضع الداكن" aria-label="الوضع الداكن"></button>
+    </div>
+  
+      <a href="en/platform.html" style="font-weight: 700; color: var(--red);">EN</a>
+  </nav>
+  <a href="contact.html" class="btn btn-line head-cta">اطلب عرضًا</a>
+</div></header>
+
+<main>
+<section class="page-hero bg-motif"><div class="wrap">
+  <div class="eyebrow">المنصة والمزايا</div>
+  <h1><span>بيئةٌ رقمية متكاملة</span></h1>
+  <p class="lead">لا تكتفي بَيَان بتقديم المحتوى، بل تتيحه داخل بيئةٍ تخدم كلّ دور: المتعلّم يقرأ ويتفاعل، والمعلّم يكلّف ويقيّم ويتابع، والإدارة والوزارة ترصد الأداء على نطاقٍ واسع.</p>
+</div></section>
+
+<section class="sec bg1"><div class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">حسابات حسب الدور</div><h2>لكلّ دورٍ واجهته وصلاحياته</h2></div>
+  <div class="reveal"><table class="cmp-table">
+    <thead><tr><th>الدور</th><th>أبرز ما يفعله داخل المنصة</th></tr></thead>
+    <tbody>
+      <tr><td>الطالب</td><td>يدخل مكتبة النصوص بمستواه، فيقرأ ويتفاعل مع المفردات والتحليل، ويؤدّي الأنشطة والاختبارات، ويتابع تقدّمه عبر المستويات.</td></tr>
+      <tr><td>المعلّم</td><td>يختار النصوص ويكلّف بها، يصحّح الأنشطة المقالية ويترك ملاحظات، يطّلع على لوحة أداء صفّه، ويواءم المحتوى مع منهجه.</td></tr>
+      <tr><td>إدارة المدرسة</td><td>تتابع أداء الصفوف والمعلمين، وترصد التقدّم مقابل أهداف القسم، وتدير الحسابات والاشتراكات.</td></tr>
+      <tr><td>الوزارة / الجهة</td><td>تطّلع على لوحاتٍ تجميعية عبر المدارس، وتقيس القرائية بمعايير موحّدة على نطاقٍ واسع.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="sec bg2"><div class="wrap">
+  <div class="platform-show">
+    <div class="imgslot has-mockup reveal par" data-speed="0.04">
+      <div class="live-mockup" id="mockLesson">
+        <div class="mock-browser-bar">
+          <div class="mock-dots"><span></span><span></span><span></span></div>
+          <div class="mock-title">بَيَان — واجهة الدرس القرائي</div>
+        </div>
+        <div class="mock-content">
+          <div class="mock-reading-panel">
+            <h4>منارة المعرفة العربية</h4>
+            <p>كانت الحضارة العربية الإسلامية <span class="mock-word-hl">منارةً<span class="mock-tooltip">منارةً: مركز إشعاع وهداية فكري وحضاري.</span></span> للعلم، تسعى لربط الفكر بالعمل، وتأسيس <span class="mock-word-hl">الفهم القرائي<span class="mock-tooltip">الفهم القرائي: استخلاص المعاني الضمنية ونقد النصوص.</span></span> كأداة رئيسية <span class="mock-word-hl">لتدبّر<span class="mock-tooltip">لتدبّر: التفكر العميق واستخلاص العبر.</span></span> العلوم واستنتاج الحقائق الكونية.</p>
+          </div>
+          <div class="mock-aside-panel">
+            <div class="mock-q-card">
+              <p>السؤال الأول: ما الغاية الأساسية للفهم القرائي حسب النص؟</p>
+              <div class="mock-option" data-correct>ربط الفكر بالعمل وتدبر المعاني</div>
+              <div class="mock-option">حفظ ونطق الكلمات بسرعة</div>
+              <div class="mock-option">نسخ النصوص التراثية فقط</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="feat stagger reveal">
+      <div class="f"><div class="ic">📊</div><h3>لوحات التتبّع والتقارير</h3><p>لوحة المتعلّم لمساره عبر المستويات، لوحة المعلّم لأداء كلّ طالبٍ وصفّ، ولوحة الإدارة/الوزارة بتقاريرَ تجميعية قابلة للتصدير تدعم القرار المبنيّ على البيانات.</p></div>
+      <div class="f"><div class="ic">🔗</div><h3>التكامل والوصول</h3><p>تكامل مع أنظمة LMS وأدوات الصفوف الرقمية، دخولٌ موحّد SSO حيثما توافر، واستجابةٌ كاملة للأجهزة (حاسوب، لوح، جوال).</p></div>
+    </div>
+  </div>
+  <div class="platform-show rev">
+    <div class="feat stagger reveal">
+      <div class="f"><div class="ic">🛡️</div><h3>مراجعة علمية</h3><p>يخضع كلُّ محتوًى لمراجعةٍ علمية متخصّصة قبل النشر، وتُصان النصوص المقدّسة والتراثية كما وردت.</p></div>
+      <div class="f"><div class="ic">♿</div><h3>إتاحة وشمول</h3><p>إتاحةٌ تدعم قارئ الشاشة والتنقّل بلوحة المفاتيح ونصوصًا بديلة للصور.</p></div>
+    </div>
+    <div class="imgslot has-mockup reveal par" data-speed="0.04">
+      <div class="live-mockup" id="mockDashboard">
+        <div class="mock-browser-bar">
+          <div class="mock-dots"><span></span><span></span><span></span></div>
+          <div class="mock-title">لوحة تحكّم المعلّم — بَيَان</div>
+        </div>
+        <div class="mock-dash-content">
+          <div class="mock-roster">
+            <h4>قائمة الطلاب</h4>
+            <div class="mock-student-row active" data-progress="82" data-read="12" data-score="88" data-chart="40,65,70,82,88">
+              <span class="mock-student-name">أحمد عبد الله</span>
+              <div class="mock-student-bar"><div class="mock-student-progress" style="width: 82%"></div></div>
+            </div>
+            <div class="mock-student-row" data-progress="94" data-read="16" data-score="96" data-chart="60,75,85,90,96">
+              <span class="mock-student-name">فاطمة عمر</span>
+              <div class="mock-student-bar"><div class="mock-student-progress" style="width: 94%"></div></div>
+            </div>
+            <div class="mock-student-row" data-progress="68" data-read="9" data-score="72" data-chart="30,45,55,62,72">
+              <span class="mock-student-name">خالد منصور</span>
+              <div class="mock-student-bar"><div class="mock-student-progress" style="width: 68%"></div></div>
+            </div>
+          </div>
+          <div class="mock-detail-panel">
+            <h4 class="mock-detail-name">أحمد عبد الله</h4>
+            <div class="mock-chart-container">
+              <div class="mock-chart-bar" style="height: 40%" data-val="40"></div>
+              <div class="mock-chart-bar" style="height: 65%" data-val="65"></div>
+              <div class="mock-chart-bar" style="height: 70%" data-val="70"></div>
+              <div class="mock-chart-bar" style="height: 82%" data-val="82"></div>
+              <div class="mock-chart-bar" style="height: 88%" data-val="88"></div>
+            </div>
+            <div class="mock-stat-grid">
+              <div class="mock-mini-card">
+                <div>القرائية</div>
+                <div class="mock-detail-prog">82%</div>
+              </div>
+              <div class="mock-mini-card">
+                <div>معدل الفهم</div>
+                <div class="mock-detail-score">88%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="cta bg1"><div class="wrap"><div class="panel reveal">
+  <div><div class="eyebrow">جولة في المنصة</div><h2 style="margin-top:14px">اطلب عرضًا حيًّا للمنصة</h2><p>يطلعك الفريق على اللوحات والأدوار والتقارير عبر جولةٍ مخصّصة لجهتك.</p></div>
+  <div style="text-align:center"><a href="contact.html" class="btn btn-primary magnetic">اطلب عرضًا <span class="arr">←</span></a></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fcols">
+    <div><div class="brand">بَيَان</div><p>منصة القرائية العربية — حين تصبح القراءةُ فهمًا. تطوير مجموعة المتحدة للتعليم.</p></div>
+    <div><h4>استكشف</h4><a href="about.html">عن بَيَان</a><a href="methodology.html">المنهجية</a><a href="axes.html">المحتوى والمحاور</a><a href="platform.html">المنصة</a></div>
+    <div><h4>الحلول</h4><a href="solutions.html">المدارس الخاصة</a><a href="solutions.html">وزارات التعليم</a><a href="solutions.html">المعلمون</a><a href="solutions.html">الطلبة</a></div>
+    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/platform.html">English</a>
+  </div>
+  <div class="fcopy"><span>© مجموعة المتحدة للتعليم — جميع الحقوق محفوظة.</span><span>نموذج تصميم — هوية بَيَان</span></div>
+</div></footer>
+<script src="assets/bayan.js"></script>
+</body>
+</html>
