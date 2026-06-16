@@ -136,11 +136,11 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ locale }) => {
             
             <motion.h2
               variants={itemVariants}
-              className={`font-bold text-[#111111] leading-[1.05] mb-6 tracking-tight font-serif
+              className={`font-bold text-[#111111] leading-[1.25] mb-6 tracking-tight font-sans
                 ${isRTL ? "text-4xl md:text-6xl lg:text-7xl" : "text-4xl md:text-5xl lg:text-6xl"}
               `}
               style={{
-                fontSize: "clamp(38px, 6vw, 84px)",
+                fontSize: "clamp(2.4rem, 4.5vw, 3.8rem)",
               }}
             >
               {t.headline.first}{" "}
@@ -151,7 +151,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ locale }) => {
 
             <motion.p
               variants={itemVariants}
-              className="text-lg md:text-xl text-[#2B2B2B] leading-relaxed mb-10 max-w-[720px] font-medium"
+              className="text-[1.12rem] text-[#555555] leading-[1.85] mb-10 max-w-[720px] font-medium"
             >
               {t.paragraph}
             </motion.p>

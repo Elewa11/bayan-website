@@ -2796,3 +2796,69 @@ html[dir="ltr"] .problem-headline {
     padding-top: 36px;
   }
 }
+
+/* ============================================================
+   TYPOGRAPHY UNIFICATION (توحيد الخطوط وأحجامها)
+   Unify all section headlines & body texts with Hero Section
+   ============================================================ */
+
+/* 1. All Main Section Headlines (العناوين الرئيسية للأقسام) */
+.sec-head h2,
+.problem-headline,
+.cta h2,
+.cta-mihrab h2,
+.mihrab-frame h2,
+.page-hero h1,
+.hero-centered h1 {
+  font-family: 'Cairo', sans-serif !important;
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  color: var(--ink) !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* LTR Heading Font Override (English) */
+html[dir="ltr"] .sec-head h2,
+html[dir="ltr"] .problem-headline,
+html[dir="ltr"] .cta h2,
+html[dir="ltr"] .cta-mihrab h2,
+html[dir="ltr"] .mihrab-frame h2,
+html[dir="ltr"] .page-hero h1,
+html[dir="ltr"] .hero-centered h1 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+/* 2. All Section Body/Sub/Lead Texts (المتن والفقرات التوضيحية للأقسام) */
+body, p {
+  font-family: 'Tajawal', sans-serif;
+  line-height: 1.85;
+}
+html[dir="ltr"] body, html[dir="ltr"] p {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.sec-head .lead,
+.problem-premium .problem-sub,
+.cta p,
+.cta-mihrab p,
+.mihrab-frame p,
+.page-hero .lead,
+.hero-centered .sub {
+  font-family: 'Tajawal', sans-serif !important;
+  font-size: 1.12rem !important;
+  line-height: 1.85 !important;
+  color: #555555 !important;
+}
+
+/* LTR Body/Lead Font Override (English) */
+html[dir="ltr"] .sec-head .lead,
+html[dir="ltr"] .problem-premium .problem-sub,
+html[dir="ltr"] .cta p,
+html[dir="ltr"] .cta-mihrab p,
+html[dir="ltr"] .mihrab-frame p,
+html[dir="ltr"] .page-hero .lead,
+html[dir="ltr"] .hero-centered .sub {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
