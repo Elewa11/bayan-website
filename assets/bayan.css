@@ -277,6 +277,7 @@ html[dir="ltr"] .btn-premium {
   font-size: 0.95rem;
   color: var(--ink);
   margin-bottom: 2px;
+  white-space: nowrap;
 }
 
 .trust-text p {
@@ -2466,4 +2467,75 @@ html[dir="rtl"] .lvl small, html[dir="rtl"] p {
 }
 .axis:hover .diamond-frame img {
   transform: scale(1.1);
+}
+
+/* ============================================================
+   RESPONSIVENESS AND LTR OVERRIDES FOR HERO REDESIGN
+   ============================================================ */
+
+/* LTR Font Overrides for modern English SaaS feel */
+html[dir="ltr"] body,
+html[dir="ltr"] h1,
+html[dir="ltr"] h2,
+html[dir="ltr"] h3,
+html[dir="ltr"] h4,
+html[dir="ltr"] .btn,
+html[dir="ltr"] .btn-premium {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Mobile responsive menu header improvements */
+@media (max-width: 1120px) {
+  .header-actions .head-cta {
+    display: none;
+  }
+}
+
+/* Hero Section mobile responsiveness */
+@media (max-width: 991px) {
+  .hero-premium {
+    padding-top: 140px;
+    min-height: auto;
+  }
+  .hero-premium-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px;
+  }
+  html[dir="rtl"] .hero-content-col { order: 1; }
+  html[dir="rtl"] .hero-visual-col { order: 2; }
+  .hero-visual-col img {
+    max-width: 80%;
+    transform: none;
+    margin: 0 auto;
+  }
+  .hero-trust {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
+  }
+  .trust-item:not(:last-child) {
+    border-inline-end: none;
+    padding-inline-end: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-premium {
+    padding-top: 100px;
+  }
+  .hero-visual-col img {
+    max-width: 100%;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .btn-premium {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .hero-trust {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
