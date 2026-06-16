@@ -133,22 +133,17 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ locale }) => {
           >
             {/* Faded Logo Watermark */}
             <div 
-              className="w-full max-w-[380px] opacity-[0.12] flex justify-center items-center select-none pointer-events-none"
+              className="absolute inset-0 flex justify-center items-center select-none pointer-events-none z-1 opacity-[0.12]"
               style={{
                 filter: "grayscale(1) brightness(0.2) sepia(1) hue-rotate(-50deg) saturate(5)",
               }}
             >
-              <img src="/images/bayan-logo-visual.png" alt="Bayan Watermark" className="w-full h-auto" />
+              <img src="/images/bayan-logo-visual.png" alt="Bayan Watermark" className="w-full max-w-[380px] h-auto" />
             </div>
 
-            {/* Floating Arabic Letters */}
-            <div className="absolute inset-0 pointer-events-none select-none">
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold top-[10%] right-[15%] animate-[floatUpDown_8s_ease-in-out_infinite]">ض</span>
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold top-[35%] left-[10%] animate-[floatUpDown_10s_ease-in-out_infinite_1s]">ق</span>
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold bottom-[15%] right-[25%] animate-[floatUpDown_9s_ease-in-out_infinite_2s]">ش</span>
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold top-[20%] left-[30%] animate-[floatUpDown_11s_ease-in-out_infinite_0.5s]">ف</span>
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold bottom-[30%] left-[20%] animate-[floatUpDown_7s_ease-in-out_infinite_1.5s]">ي</span>
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold bottom-[45%] right-[10%] animate-[floatUpDown_12s_ease-in-out_infinite_3s]">ل</span>
+            {/* Main Foreground Image */}
+            <div className="relative z-10 w-full max-w-[440px] rounded-2xl overflow-hidden border border-[#E5E5E5] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.08)] bg-white transition-all duration-300 hover:-translate-y-1">
+              <img src="/images/problem.jpg" alt="Bayan Problem Visual" className="w-full h-auto" />
             </div>
           </motion.div>
 
