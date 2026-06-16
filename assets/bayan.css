@@ -2539,3 +2539,260 @@ html[dir="ltr"] .btn-premium {
     gap: 16px;
   }
 }
+
+/* ============================================================
+   PROBLEM SECTION (المشكلة والحل)
+   ============================================================ */
+.problem-premium {
+  position: relative;
+  background: var(--paper);
+  padding-top: clamp(80px, 12vh, 140px);
+  padding-bottom: clamp(80px, 12vh, 140px);
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.problem-premium-grid {
+  display: grid;
+  gap: 80px;
+  align-items: center;
+}
+
+html[dir="rtl"] .problem-premium-grid {
+  grid-template-columns: 0.9fr 1.1fr; /* Visual (left) 0.9fr, Content (right) 1.1fr */
+}
+html[dir="ltr"] .problem-premium-grid {
+  grid-template-columns: 1.1fr 0.9fr; /* Content (left) 1.1fr, Visual (right) 0.9fr */
+}
+
+/* RTL layout column sorting */
+html[dir="rtl"] .problem-content-col { order: 2; }
+html[dir="rtl"] .problem-visual-col { order: 1; }
+
+/* LTR layout column sorting */
+html[dir="ltr"] .problem-content-col { order: 1; }
+html[dir="ltr"] .problem-visual-col { order: 2; }
+
+.problem-content-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  z-index: 2;
+}
+
+html[dir="rtl"] .problem-content-col {
+  align-items: flex-start;
+  text-align: right;
+}
+
+.problem-eyebrow {
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: var(--red);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.problem-headline {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+html[dir="rtl"] .problem-headline {
+  font-size: clamp(38px, 6vw, 84px); /* Optimized Arabic size */
+}
+html[dir="ltr"] .problem-headline {
+  font-size: clamp(38px, 6vw, 76px); /* Optimized English size */
+}
+
+.problem-headline .highlight {
+  color: var(--red);
+}
+
+.problem-premium .problem-sub {
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  line-height: 1.8;
+  color: var(--body);
+  margin-bottom: 40px;
+  max-width: 720px;
+}
+
+/* Icons Grid */
+.problem-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 40px;
+  width: 100%;
+}
+
+.problem-icon-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.problem-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--paper-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.problem-icon-item:hover .problem-icon-wrapper {
+  transform: scale(1.1);
+  background: rgba(247, 24, 33, 0.08);
+}
+
+.problem-icon-title {
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+/* Visual Column */
+.problem-visual-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.watermark-logo-wrap {
+  width: 100%;
+  max-width: 380px;
+  opacity: 0.07; /* 7% opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(1) brightness(0.2) sepia(1) hue-rotate(-50deg) saturate(5); /* Make it brand red watermark */
+}
+
+/* On theme sepia / dark, adjust filter */
+.theme-sepia .watermark-logo-wrap {
+  filter: grayscale(1) brightness(0.3) sepia(1) hue-rotate(-50deg) saturate(4);
+}
+.theme-dark .watermark-logo-wrap {
+  filter: grayscale(1) brightness(0.6) sepia(1) hue-rotate(-50deg) saturate(5);
+  opacity: 0.05;
+}
+
+.watermark-logo {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+/* Floating letters in visual column */
+.floating-letters {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.f-letter {
+  font-family: 'Amiri', serif;
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  color: var(--ink);
+  opacity: 0.05; /* 5% opacity */
+  font-weight: 700;
+  user-select: none;
+}
+
+.letter-1 { top: 10%; right: 15%; animation: floatUpDown 8s ease-in-out infinite; }
+.letter-2 { top: 35%; left: 10%; animation: floatUpDown 10s ease-in-out infinite 1s; }
+.letter-3 { bottom: 15%; right: 25%; animation: floatUpDown 9s ease-in-out infinite 2s; }
+.letter-4 { top: 20%; left: 30%; animation: floatUpDown 11s ease-in-out infinite 0.5s; }
+.letter-5 { bottom: 30%; left: 20%; animation: floatUpDown 7s ease-in-out infinite 1.5s; }
+.letter-6 { bottom: 45%; right: 10%; animation: floatUpDown 12s ease-in-out infinite 3s; }
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Quote container */
+.quote-container {
+  margin-top: 80px;
+  border-top: 1px dashed var(--line-2);
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.problem-quote {
+  font-family: 'Amiri', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.45;
+  color: var(--ink);
+  text-align: center;
+  max-width: 860px;
+}
+
+.problem-quote .highlight {
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* Responsiveness overrides for ProblemSection */
+@media (max-width: 991px) {
+  .problem-premium {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .problem-premium-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px;
+  }
+  html[dir="rtl"] .problem-content-col { order: 1; }
+  html[dir="rtl"] .problem-visual-col { order: 2; }
+  .problem-visual-col {
+    min-height: 200px;
+  }
+  .watermark-logo-wrap {
+    max-width: 260px;
+  }
+  .problem-icons-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .problem-premium {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .problem-visual-col {
+    display: none; /* Hide visual watermark on mobile */
+  }
+  .problem-icons-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .quote-container {
+    margin-top: 48px;
+    padding-top: 36px;
+  }
+}
