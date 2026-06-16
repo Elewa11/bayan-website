@@ -2913,3 +2913,358 @@ html[dir="ltr"] .hero-centered .sub {
   font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
 }
 
+/* ---------------------------------------------------- */
+/* 7. New Knowledge Axes Section (Mockup Redesign)      */
+/* ---------------------------------------------------- */
+.sec-axes {
+  background-color: #FAF9F7;
+  padding-block: clamp(60px, 10vh, 100px);
+  color: #111111;
+  overflow: hidden;
+}
+
+.sec-axes .red-diamond {
+  color: #F71821;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.axes-grid-container {
+  position: relative;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+@media (min-width: 1024px) {
+  .axes-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 280px 1fr;
+    align-items: center;
+    gap: 40px;
+    direction: ltr; /* Ensure left column is always left visually */
+  }
+  
+  .axes-col-side {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between the two cards vertically */
+  }
+}
+
+/* Center Circle Container */
+.axes-col-center {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin-inline: auto;
+  border: 1px solid #E5D8C8;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  box-shadow: 0 4px 20px -5px rgba(45, 37, 32, 0.05);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.axes-col-center .circle-ring-dashed {
+  position: absolute;
+  inset: 16px;
+  border: 1.2px dashed rgba(229, 216, 200, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.axes-col-center .circle-ring-solid {
+  position: absolute;
+  inset: 32px;
+  border: 1px solid rgba(229, 216, 200, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.axes-col-center .circle-bg-gradient {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 10%, #FAF9F7 80%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.axes-col-center .center-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 16px;
+}
+
+.axes-col-center .center-content img {
+  height: 96px;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+  filter: invert(19%) sepia(87%) saturate(6444%) hue-rotate(352deg) brightness(97%) contrast(98%);
+  margin-bottom: 8px;
+}
+
+.axes-col-center .center-content h4 {
+  font-family: var(--font-sans, 'Cairo', sans-serif);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+
+.axes-col-center .center-content p {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #777777;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* Center circle decorative small nodes */
+.axes-col-center .node-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border: 1px solid #D8C6B6;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.axes-col-center .node-dot.right {
+  right: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.axes-col-center .node-dot.left {
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.axes-col-center .node-diamond {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #D8C6B6;
+  transform: rotate(45deg);
+}
+.axes-col-center .node-diamond.top {
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+.axes-col-center .node-diamond.bottom {
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* Axis Card styles */
+.axis-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.axis-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -10px rgba(45, 37, 32, 0.08);
+}
+
+/* Specific themes */
+.axis-card.axis-green { border: 1px solid #bbf7d0; }
+.axis-card.axis-sky { border: 1px solid #bae6fd; }
+.axis-card.axis-amber { border: 1px solid #fef3c7; }
+.axis-card.axis-orange { border: 1px solid #ffedd5; }
+
+.axis-badge {
+  position: absolute;
+  top: -32px;
+  left: 24px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid #E5D8C8;
+  background: #FAF9F7;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+[dir="rtl"] .axis-badge {
+  left: auto;
+  right: 24px;
+}
+
+.axis-card:hover .axis-badge {
+  transform: scale(1.05);
+}
+
+/* Theme icon colors */
+.axis-green .axis-badge { color: #15803d; }
+.axis-sky .axis-badge { color: #075985; }
+.axis-amber .axis-badge { color: #78350f; }
+.axis-orange .axis-badge { color: #c2410c; }
+
+/* Desktop card variations (Left/Right columns facing center) */
+@media (min-width: 1024px) {
+  .axis-card {
+    padding-top: 28px;
+    height: 160px; /* Force standard height for symmetrical connection line layouts */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Left column cards - icon badge overlaps right border */
+  .axis-card.axis-left {
+    padding-right: 96px; /* 6rem to clear badge */
+    padding-left: 24px;
+  }
+  
+  .axis-card.axis-left-top .axis-badge {
+    bottom: 20px;
+    top: auto;
+    right: -32px;
+    left: auto;
+  }
+  .axis-card.axis-left-top:hover .axis-badge {
+    transform: scale(1.05);
+  }
+  
+  .axis-card.axis-left-bottom .axis-badge {
+    top: 20px;
+    bottom: auto;
+    right: -32px;
+    left: auto;
+  }
+  .axis-card.axis-left-bottom:hover .axis-badge {
+    transform: scale(1.05);
+  }
+
+  /* Right column cards - icon badge overlaps left border */
+  .axis-card.axis-right {
+    padding-left: 96px; /* 6rem to clear badge */
+    padding-right: 24px;
+  }
+  
+  .axis-card.axis-right-top .axis-badge {
+    bottom: 20px;
+    top: auto;
+    left: -32px;
+    right: auto;
+  }
+  .axis-card.axis-right-top:hover .axis-badge {
+    transform: scale(1.05);
+  }
+  
+  .axis-card.axis-right-bottom .axis-badge {
+    top: 20px;
+    bottom: auto;
+    left: -32px;
+    right: auto;
+  }
+  .axis-card.axis-right-bottom:hover .axis-badge {
+    transform: scale(1.05);
+  }
+}
+
+/* Card typography */
+.axis-card-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.axis-card h3 {
+  font-family: var(--font-sans, 'Cairo', sans-serif);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 2px 0;
+  text-align: right;
+}
+
+html[dir="ltr"] .axis-card h3 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  text-align: left;
+}
+
+.axis-green h3 { color: #15803d; }
+.axis-sky h3 { color: #075985; }
+.axis-amber h3 { color: #78350f; }
+.axis-orange h3 { color: #c2410c; }
+
+.axis-card .card-diamond-sep {
+  font-size: 0.75rem;
+  margin-bottom: 6px;
+  text-align: right;
+}
+
+html[dir="ltr"] .axis-card .card-diamond-sep {
+  text-align: left;
+}
+
+.axis-green .card-diamond-sep { color: #15803d; }
+.axis-sky .card-diamond-sep { color: #075985; }
+.axis-amber .card-diamond-sep { color: #78350f; }
+.axis-orange .card-diamond-sep { color: #c2410c; }
+
+.axis-card p {
+  font-size: 0.95rem !important;
+  line-height: 1.8 !important;
+  color: #555555 !important;
+  font-weight: 500 !important;
+  margin: 0;
+  text-align: right;
+}
+
+html[dir="ltr"] .axis-card p {
+  text-align: left !important;
+}
+
+/* SVG connections absolute wrapper */
+.axes-connections {
+  z-index: 1;
+}
+
+/* Bottom CTA hover styles */
+.sec-axes .btn-pill-cta {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid #F71821;
+  background: #ffffff;
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111111;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sec-axes .btn-pill-cta:hover {
+  background: #F71821;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(247, 24, 33, 0.15);
+  transform: translateY(-2px);
+}
+
