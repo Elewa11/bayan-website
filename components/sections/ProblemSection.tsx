@@ -123,10 +123,40 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ locale }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center"
+          className="grid grid-cols-1 md:grid-cols-[0.45fr_0.55fr] gap-12 lg:gap-20 items-center [direction:ltr]"
         >
+          {/* Column B: Decorative Visual */}
+          <motion.div
+            variants={watermarkVariants}
+            aria-hidden="true"
+            className="flex justify-center items-center relative w-full h-full min-h-[200px] md:min-h-[300px] order-2 md:order-1"
+          >
+            {/* Faded Logo Watermark */}
+            <div 
+              className="w-full max-w-[380px] opacity-[0.12] flex justify-center items-center select-none pointer-events-none"
+              style={{
+                filter: "grayscale(1) brightness(0.2) sepia(1) hue-rotate(-50deg) saturate(5)",
+              }}
+            >
+              <img src="/images/bayan-logo-visual.png" alt="Bayan Watermark" className="w-full h-auto" />
+            </div>
+
+            {/* Floating Arabic Letters */}
+            <div className="absolute inset-0 pointer-events-none select-none">
+              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold top-[10%] right-[15%] animate-[floatUpDown_8s_ease-in-out_infinite]">ض</span>
+              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold top-[35%] left-[10%] animate-[floatUpDown_10s_ease-in-out_infinite_1s]">ق</span>
+              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold bottom-[15%] right-[25%] animate-[floatUpDown_9s_ease-in-out_infinite_2s]">ش</span>
+              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold top-[20%] left-[30%] animate-[floatUpDown_11s_ease-in-out_infinite_0.5s]">ف</span>
+              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold bottom-[30%] left-[20%] animate-[floatUpDown_7s_ease-in-out_infinite_1.5s]">ي</span>
+              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold bottom-[45%] right-[10%] animate-[floatUpDown_12s_ease-in-out_infinite_3s]">ل</span>
+            </div>
+          </motion.div>
+
           {/* Column A: Text Content */}
-          <div className={`flex flex-col items-start ${isRTL ? "text-right lg:order-2" : "text-left lg:order-1"} z-10`}>
+          <div 
+            dir={isRTL ? "rtl" : "ltr"}
+            className={`flex flex-col items-start ${isRTL ? "text-right" : "text-left"} z-10 order-1 md:order-2 w-full`}
+          >
             <motion.span
               variants={itemVariants}
               className="text-sm font-bold tracking-wider text-[#F71821] uppercase mb-4 font-sans"
@@ -177,33 +207,6 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ locale }) => {
               })}
             </div>
           </div>
-
-          {/* Column B: Decorative Visual */}
-          <motion.div
-            variants={watermarkVariants}
-            aria-hidden="true"
-            className={`hidden lg:flex justify-center items-center relative w-full h-full min-h-[300px] ${isRTL ? "lg:order-1" : "lg:order-2"}`}
-          >
-            {/* Faded Logo Watermark */}
-            <div 
-              className="w-full max-w-[380px] opacity-[0.07] flex justify-center items-center select-none pointer-events-none"
-              style={{
-                filter: "grayscale(1) brightness(0.2) sepia(1) hue-rotate(-50deg) saturate(5)",
-              }}
-            >
-              <img src="/products-extra-1.png" alt="" className="w-full h-auto" />
-            </div>
-
-            {/* Floating Arabic Letters */}
-            <div className="absolute inset-0 pointer-events-none select-none">
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold top-[10%] right-[15%] animate-[floatUpDown_8s_ease-in-out_infinite]">ض</span>
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold top-[35%] left-[10%] animate-[floatUpDown_10s_ease-in-out_infinite_1s]">ق</span>
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold bottom-[15%] right-[25%] animate-[floatUpDown_9s_ease-in-out_infinite_2s]">ش</span>
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold top-[20%] left-[30%] animate-[floatUpDown_11s_ease-in-out_infinite_0.5s]">ف</span>
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold bottom-[30%] left-[20%] animate-[floatUpDown_7s_ease-in-out_infinite_1.5s]">ي</span>
-              <span className="absolute text-5xl md:text-7xl font-serif text-[#111111] opacity-[0.05] font-bold bottom-[45%] right-[10%] animate-[floatUpDown_12s_ease-in-out_infinite_3s]">ل</span>
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* Quote Block */}
