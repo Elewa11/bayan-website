@@ -185,10 +185,15 @@ export default function KnowledgeAxesSection({ locale = "ar" }: KnowledgeAxesSec
         </div>
 
         {/* Axes Interactive Layout */}
-        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_280px_1fr]">
+        <div className="axes-wrapper relative">
           
           {/* SVG Connection Lines for Desktop (lg) */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block" style={{ zIndex: 1 }}>
+          <svg 
+            className="axes-connections absolute inset-0 w-full h-full pointer-events-none hidden lg:block" 
+            viewBox="0 0 1152 400" 
+            preserveAspectRatio="none" 
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none", zIndex: 1 }}
+          >
             {/* Left-Top Connection */}
             <path d="M 380 120 L 480 200" stroke="#E5D8C8" strokeWidth="1.2" strokeDasharray="4 4" fill="none" />
             <circle cx="480" cy="200" r="3" fill="#D8C6B6" />
@@ -206,51 +211,52 @@ export default function KnowledgeAxesSection({ locale = "ar" }: KnowledgeAxesSec
             <circle cx="672" cy="300" r="3" fill="#D8C6B6" />
           </svg>
 
-          {/* Column 1 (Left Column) - Islamic & Subject */}
-          <div className="space-y-12 lg:space-y-16" style={{ zIndex: 2 }}>
-            <AxisCard cardIndex={0} isLeft={true} locale={locale} {...axes[0]} />
-            <AxisCard cardIndex={2} isLeft={true} locale={locale} {...axes[2]} />
-          </div>
-
-          {/* Center Circle */}
-          <div className="relative mx-auto flex h-72 w-72 items-center justify-center rounded-full border border-[#E5D8C8] bg-white/70 shadow-sm backdrop-blur-sm" style={{ zIndex: 2 }}>
-            {/* Inner decorative rings */}
-            <div className="absolute inset-4 rounded-full border border-[#E5D8C8]/60 border-dashed" />
-            <div className="absolute inset-8 rounded-full border border-[#E5D8C8]/40" />
-            <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,#ffffff_10%,#FAF9F7_80%)] opacity-50" />
-
-            {/* Inner Content */}
-            <div className="relative z-10 text-center flex flex-col items-center px-4">
-              {/* Calligraphy logo / Image styled as red */}
-              <div className="h-24 w-24 mb-2 flex items-center justify-center">
-                <img 
-                  src="/images/bayan-logo-visual.png" 
-                  alt="Bayan Calligraphy" 
-                  className="h-full w-auto object-contain select-none pointer-events-none"
-                  style={{
-                    filter: "invert(19%) sepia(87%) saturate(6444%) hue-rotate(352deg) brightness(97%) contrast(98%)"
-                  }}
-                />
-              </div>
-              <p className="text-lg font-bold text-[#111111] font-sans">{t.centerSub}</p>
-              <p className="mt-1 text-xs leading-5 text-[#777] font-medium whitespace-pre-line">
-                {t.centerDesc}
-              </p>
+          <div className="axes-grid-container relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_280px_1fr]">
+            {/* Column 1 (Left Column) - Islamic & Subject */}
+            <div className="space-y-12 lg:space-y-16" style={{ zIndex: 2 }}>
+              <AxisCard cardIndex={0} isLeft={true} locale={locale} {...axes[0]} />
+              <AxisCard cardIndex={2} isLeft={true} locale={locale} {...axes[2]} />
             </div>
 
-            {/* Micro decorative nodes on the center circle */}
-            <span className="absolute -right-2 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border border-[#D8C6B6] bg-white shadow-sm" />
-            <span className="absolute -left-2 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border border-[#D8C6B6] bg-white shadow-sm" />
-            <span className="absolute left-1/2 top-0 h-3.5 w-3.5 -translate-x-1/2 rotate-45 bg-[#D8C6B6]" />
-            <span className="absolute bottom-0 left-1/2 h-3.5 w-3.5 -translate-x-1/2 rotate-45 bg-[#D8C6B6]" />
-          </div>
+            {/* Center Circle */}
+            <div className="axes-col-center relative mx-auto flex h-72 w-72 items-center justify-center rounded-full border border-[#E5D8C8] bg-white/70 shadow-sm backdrop-blur-sm" style={{ zIndex: 2 }}>
+              {/* Inner decorative rings */}
+              <div className="circle-ring-dashed absolute inset-4 rounded-full border border-[#E5D8C8]/60 border-dashed" />
+              <div className="circle-ring-solid absolute inset-8 rounded-full border border-[#E5D8C8]/40" />
+              <div className="circle-bg-gradient absolute inset-0 rounded-full bg-[radial-gradient(circle,#ffffff_10%,#FAF9F7_80%)] opacity-50" />
 
-          {/* Column 2 (Right Column) - Cultural & Local */}
-          <div className="space-y-12 lg:space-y-16" style={{ zIndex: 2 }}>
-            <AxisCard cardIndex={1} isLeft={false} locale={locale} {...axes[1]} />
-            <AxisCard cardIndex={3} isLeft={false} locale={locale} {...axes[3]} />
-          </div>
+              {/* Inner Content */}
+              <div className="center-content relative z-10 text-center flex flex-col items-center px-4">
+                {/* Calligraphy logo / Image styled as red */}
+                <div className="h-24 w-24 mb-2 flex items-center justify-center">
+                  <img 
+                    src="/images/bayan-logo-visual.png" 
+                    alt="Bayan Calligraphy" 
+                    className="h-full w-auto object-contain select-none pointer-events-none"
+                    style={{
+                      filter: "invert(19%) sepia(87%) saturate(6444%) hue-rotate(352deg) brightness(97%) contrast(98%)"
+                    }}
+                  />
+                </div>
+                <h4 className="text-lg font-bold text-[#111111] font-sans">{t.centerSub}</h4>
+                <p className="mt-1 text-xs leading-5 text-[#777] font-medium whitespace-pre-line">
+                  {t.centerDesc}
+                </p>
+              </div>
 
+              {/* Micro decorative nodes on the center circle */}
+              <span className="node-dot right absolute -right-2 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border border-[#D8C6B6] bg-white shadow-sm" />
+              <span className="node-dot left absolute -left-2 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border border-[#D8C6B6] bg-white shadow-sm" />
+              <span className="node-diamond top absolute left-1/2 top-0 h-3.5 w-3.5 -translate-x-1/2 rotate-45 bg-[#D8C6B6]" />
+              <span className="node-diamond bottom absolute bottom-0 left-1/2 h-3.5 w-3.5 -translate-x-1/2 rotate-45 bg-[#D8C6B6]" />
+            </div>
+
+            {/* Column 2 (Right Column) - Cultural & Local */}
+            <div className="space-y-12 lg:space-y-16" style={{ zIndex: 2 }}>
+              <AxisCard cardIndex={1} isLeft={false} locale={locale} {...axes[1]} />
+              <AxisCard cardIndex={3} isLeft={false} locale={locale} {...axes[3]} />
+            </div>
+          </div>
         </div>
 
         {/* CTA Button */}
@@ -288,6 +294,7 @@ function AxisCard({
   icon: Icon,
   isLeft,
   locale,
+  cardIndex,
 }: AxisCardProps) {
   const isRTL = locale === "ar";
   
@@ -302,13 +309,27 @@ function AxisCard({
     ? "lg:left-auto lg:right-[-2.25rem] lg:top-1/2 lg:-translate-y-1/2"
     : "lg:right-auto lg:left-[-2.25rem] lg:top-1/2 lg:-translate-y-1/2";
 
+  let themeClass = "";
+  if (cardIndex === 0) themeClass = "axis-green";
+  else if (cardIndex === 1) themeClass = "axis-amber";
+  else if (cardIndex === 2) themeClass = "axis-sky";
+  else if (cardIndex === 3) themeClass = "axis-orange";
+
+  const sideClass = isLeft ? "axis-left" : "axis-right";
+  
+  let positionClass = "";
+  if (cardIndex === 0) positionClass = "axis-left-top";
+  else if (cardIndex === 2) positionClass = "axis-left-bottom";
+  else if (cardIndex === 1) positionClass = "axis-right-top";
+  else if (cardIndex === 3) positionClass = "axis-right-bottom";
+
   return (
     <div
-      className={`relative rounded-2xl border ${border} bg-white/95 p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md pt-16 lg:pt-7 ${paddingClass}`}
+      className={`axis-card ${sideClass} ${positionClass} ${themeClass} relative rounded-2xl border ${border} bg-white/95 p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md pt-16 lg:pt-7 ${paddingClass}`}
     >
       {/* Icon Badge overlapping the borders */}
       <div
-        className={`absolute top-[-2.25rem] left-6 lg:top-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#E5D8C8] bg-[#FAF9F7] shadow-sm transition-all duration-300 group-hover:scale-105 ${badgePositionClass}`}
+        className={`axis-badge absolute top-[-2.25rem] left-6 lg:top-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#E5D8C8] bg-[#FAF9F7] shadow-sm transition-all duration-300 group-hover:scale-105 ${badgePositionClass}`}
         style={{
           right: isRTL && !isLeft ? "auto" : undefined,
           left: isRTL && isLeft ? "auto" : undefined,
@@ -326,7 +347,7 @@ function AxisCard({
         </h3>
         
         {/* Tiny diamond separator matching mockup */}
-        <div className="w-full text-right mb-4">
+        <div className="card-diamond-sep w-full text-right mb-4">
           <span className={`inline-block text-xs ${color} opacity-60`}>◇</span>
         </div>
 

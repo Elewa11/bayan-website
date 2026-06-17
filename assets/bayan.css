@@ -2929,6 +2929,10 @@ html[dir="ltr"] .hero-centered .sub {
   line-height: 1;
 }
 
+.axes-wrapper {
+  position: relative;
+}
+
 .axes-grid-container {
   position: relative;
   margin-top: 60px;
@@ -3129,7 +3133,8 @@ html[dir="ltr"] .hero-centered .sub {
 @media (min-width: 1024px) {
   .axis-card {
     padding-top: 28px;
-    height: 160px; /* Force standard height for symmetrical connection line layouts */
+    min-height: 160px;
+    height: auto;
     display: flex;
     align-items: center;
   }
