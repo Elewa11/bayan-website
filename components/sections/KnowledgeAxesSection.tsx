@@ -211,12 +211,12 @@ export default function KnowledgeAxesSection({ locale = "ar" }: KnowledgeAxesSec
             <circle cx="672" cy="300" r="3" fill="#D8C6B6" />
           </svg>
 
-          <div className="axes-grid-container relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_280px_1fr]">
-            {/* Column 1 (Left Column) - Islamic & Subject */}
-            <div className="space-y-12 lg:space-y-16" style={{ zIndex: 2 }}>
-              <AxisCard cardIndex={0} isLeft={true} locale={locale} {...axes[0]} />
-              <AxisCard cardIndex={2} isLeft={true} locale={locale} {...axes[2]} />
-            </div>
+          <div className="axes-grid-container relative mx-auto grid max-w-6xl">
+            {/* Card 1: Islamic */}
+            <AxisCard cardIndex={0} isLeft={true} locale={locale} {...axes[0]} />
+
+            {/* Card 3: Subject */}
+            <AxisCard cardIndex={2} isLeft={true} locale={locale} {...axes[2]} />
 
             {/* Center Circle */}
             <div className="axes-col-center relative mx-auto flex h-72 w-72 items-center justify-center rounded-full border border-[#E5D8C8] bg-white/70 shadow-sm backdrop-blur-sm" style={{ zIndex: 2 }}>
@@ -251,11 +251,11 @@ export default function KnowledgeAxesSection({ locale = "ar" }: KnowledgeAxesSec
               <span className="node-diamond bottom absolute bottom-0 left-1/2 h-3.5 w-3.5 -translate-x-1/2 rotate-45 bg-[#D8C6B6]" />
             </div>
 
-            {/* Column 2 (Right Column) - Cultural & Local */}
-            <div className="space-y-12 lg:space-y-16" style={{ zIndex: 2 }}>
-              <AxisCard cardIndex={1} isLeft={false} locale={locale} {...axes[1]} />
-              <AxisCard cardIndex={3} isLeft={false} locale={locale} {...axes[3]} />
-            </div>
+            {/* Card 2: Cultural */}
+            <AxisCard cardIndex={1} isLeft={false} locale={locale} {...axes[1]} />
+
+            {/* Card 4: Local */}
+            <AxisCard cardIndex={3} isLeft={false} locale={locale} {...axes[3]} />
           </div>
         </div>
 

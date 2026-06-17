@@ -2934,26 +2934,35 @@ html[dir="ltr"] .hero-centered .sub {
 }
 
 .axes-grid-container {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "circle"
+    "islamic"
+    "subject"
+    "historical"
+    "local";
+  gap: 40px;
   margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
 }
+
+/* Map cards and circle to grid areas */
+.axes-grid-container .axis-green { grid-area: islamic; }
+.axes-grid-container .axis-sky { grid-area: subject; }
+.axes-grid-container .axis-amber { grid-area: historical; }
+.axes-grid-container .axis-orange { grid-area: local; }
+.axes-grid-container .axes-col-center { grid-area: circle; }
 
 @media (min-width: 1024px) {
   .axes-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 280px 1fr;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "islamic circle"
+      "subject circle"
+      "historical local";
     gap: 40px;
-    direction: ltr; /* Ensure left column is always left visually */
-  }
-  
-  .axes-col-side {
-    display: flex;
-    flex-direction: column;
-    gap: 40px; /* Space between the two cards vertically */
+    align-items: stretch;
+    direction: ltr; /* Cards always left visually, circle on right */
   }
 }
 
@@ -2974,6 +2983,13 @@ html[dir="ltr"] .hero-centered .sub {
   justify-content: center;
   z-index: 2;
   box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .axes-col-center {
+    align-self: center;
+    justify-self: center;
+  }
 }
 
 .axes-col-center .circle-ring-dashed {
@@ -3079,11 +3095,15 @@ html[dir="ltr"] .hero-centered .sub {
   position: relative;
   background: #ffffff;
   border-radius: 16px;
-  padding: 28px;
+  padding: 44px 24px 28px 24px; /* More top padding for centered top badge */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
   z-index: 2;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .axis-card:hover {
@@ -3091,16 +3111,17 @@ html[dir="ltr"] .hero-centered .sub {
   box-shadow: 0 16px 36px -10px rgba(45, 37, 32, 0.08);
 }
 
-/* Specific themes */
-.axis-card.axis-green { border: 1px solid #bbf7d0; }
-.axis-card.axis-sky { border: 1px solid #bae6fd; }
-.axis-card.axis-amber { border: 1px solid #fef3c7; }
-.axis-card.axis-orange { border: 1px solid #ffedd5; }
+/* Vibrant border colors matching mockup design */
+.axis-card.axis-green { border: 1.5px solid #22c55e; }
+.axis-card.axis-sky { border: 1.5px solid #0284c7; }
+.axis-card.axis-amber { border: 1.5px solid #b45309; }
+.axis-card.axis-orange { border: 1.5px solid #ea580c; }
 
 .axis-badge {
   position: absolute;
   top: -32px;
-  left: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -3114,81 +3135,20 @@ html[dir="ltr"] .hero-centered .sub {
   z-index: 10;
 }
 
-[dir="rtl"] .axis-badge {
-  left: auto;
-  right: 24px;
-}
-
 .axis-card:hover .axis-badge {
-  transform: scale(1.05);
+  transform: translateX(-50%) scale(1.05);
 }
 
 /* Theme icon colors */
-.axis-green .axis-badge { color: #15803d; }
-.axis-sky .axis-badge { color: #075985; }
-.axis-amber .axis-badge { color: #78350f; }
-.axis-orange .axis-badge { color: #c2410c; }
+.axis-green .axis-badge { color: #22c55e; }
+.axis-sky .axis-badge { color: #0284c7; }
+.axis-amber .axis-badge { color: #b45309; }
+.axis-orange .axis-badge { color: #ea580c; }
 
-/* Desktop card variations (Left/Right columns facing center) */
 @media (min-width: 1024px) {
   .axis-card {
-    padding-top: 28px;
-    min-height: 160px;
+    min-height: 170px;
     height: auto;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Left column cards - icon badge overlaps right border */
-  .axis-card.axis-left {
-    padding-right: 96px; /* 6rem to clear badge */
-    padding-left: 24px;
-  }
-  
-  .axis-card.axis-left-top .axis-badge {
-    bottom: 20px;
-    top: auto;
-    right: -32px;
-    left: auto;
-  }
-  .axis-card.axis-left-top:hover .axis-badge {
-    transform: scale(1.05);
-  }
-  
-  .axis-card.axis-left-bottom .axis-badge {
-    top: 20px;
-    bottom: auto;
-    right: -32px;
-    left: auto;
-  }
-  .axis-card.axis-left-bottom:hover .axis-badge {
-    transform: scale(1.05);
-  }
-
-  /* Right column cards - icon badge overlaps left border */
-  .axis-card.axis-right {
-    padding-left: 96px; /* 6rem to clear badge */
-    padding-right: 24px;
-  }
-  
-  .axis-card.axis-right-top .axis-badge {
-    bottom: 20px;
-    top: auto;
-    left: -32px;
-    right: auto;
-  }
-  .axis-card.axis-right-top:hover .axis-badge {
-    transform: scale(1.05);
-  }
-  
-  .axis-card.axis-right-bottom .axis-badge {
-    top: 20px;
-    bottom: auto;
-    left: -32px;
-    right: auto;
-  }
-  .axis-card.axis-right-bottom:hover .axis-badge {
-    transform: scale(1.05);
   }
 }
 
@@ -3203,34 +3163,25 @@ html[dir="ltr"] .hero-centered .sub {
   font-family: var(--font-sans, 'Cairo', sans-serif);
   font-size: 1.5rem;
   font-weight: 800;
-  margin: 0 0 2px 0;
-  text-align: right;
+  margin: 0 0 4px 0;
+  text-align: center; /* Centered title */
 }
 
-html[dir="ltr"] .axis-card h3 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
-  text-align: left;
-}
-
-.axis-green h3 { color: #15803d; }
-.axis-sky h3 { color: #075985; }
-.axis-amber h3 { color: #78350f; }
-.axis-orange h3 { color: #c2410c; }
+.axis-green h3 { color: #22c55e; }
+.axis-sky h3 { color: #0284c7; }
+.axis-amber h3 { color: #b45309; }
+.axis-orange h3 { color: #ea580c; }
 
 .axis-card .card-diamond-sep {
   font-size: 0.75rem;
-  margin-bottom: 6px;
-  text-align: right;
+  margin-bottom: 8px;
+  text-align: center; /* Centered separator */
 }
 
-html[dir="ltr"] .axis-card .card-diamond-sep {
-  text-align: left;
-}
-
-.axis-green .card-diamond-sep { color: #15803d; }
-.axis-sky .card-diamond-sep { color: #075985; }
-.axis-amber .card-diamond-sep { color: #78350f; }
-.axis-orange .card-diamond-sep { color: #c2410c; }
+.axis-green .card-diamond-sep { color: #22c55e; }
+.axis-sky .card-diamond-sep { color: #0284c7; }
+.axis-amber .card-diamond-sep { color: #b45309; }
+.axis-orange .card-diamond-sep { color: #ea580c; }
 
 .axis-card p {
   font-size: 0.95rem !important;
@@ -3238,7 +3189,7 @@ html[dir="ltr"] .axis-card .card-diamond-sep {
   color: #555555 !important;
   font-weight: 500 !important;
   margin: 0;
-  text-align: right;
+  text-align: right; /* Text flows natively according to language direction */
 }
 
 html[dir="ltr"] .axis-card p {
