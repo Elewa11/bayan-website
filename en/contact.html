@@ -4,17 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Request a Demo — Bayan</title>
-<script>
-  (function() {
-    var t = localStorage.getItem('bayan-theme');
-    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
-    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
-  })();
-</script>
-<meta name="description" content="Contact the Bayan team and request a customized demo for your educational institution.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/bayan.css">
+<link rel="stylesheet" href="../assets/bayan.css?v=20260617-motif">
 </head>
 <body>
 <div class="progress"><span id="prog"></span></div>
@@ -22,24 +14,19 @@
 
 <header id="head"><div class="wrap bar">
   <a href="index.html" class="brand"><img src="../products-extra-1.png" alt="Bayan"></a>
+  <button class="menu-btn" id="menuBtn">☰</button>
   <nav class="nav" id="nav">
-    <a href="index.html" >Home</a>
-    <a href="about.html" >About Bayan</a>
-    <a href="methodology.html" >Methodology</a>
-    <a href="axes.html" >Content &amp; Axes</a>
-    <a href="platform.html" >Platform &amp; Features</a>
-    <a href="solutions.html" >Solutions</a>
-    <a href="reading-vs-literacy.html" >Reading vs Literacy</a>
-    <a href="contact.html" class="active">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Bayan</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="axes.html">Content &amp; Axes</a>
+    <a href="platform.html">Platform</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="reading-vs-literacy.html">Reading vs Literacy</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html" style="font-weight: 700; color: var(--red);">عربي</a>
   </nav>
-  <div class="header-actions">
-    <a href="../contact.html" class="lang-switcher">
-      <span>عربي</span>
-      <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-    </a>
-    <a href="contact.html" class="btn btn-primary head-cta">Request a Demo</a>
-  </div>
-  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <a href="contact.html" class="btn btn-line head-cta active">Request a Demo</a>
 </div></header>
 
 <main>
@@ -81,7 +68,7 @@
     <div><div class="brand">Bayan</div><p>Arabic Literacy Platform — Where reading becomes understanding. Developed by Integrated Education Solutions (IES).</p></div>
     <div><h4>Explore</h4><a href="about.html">About Bayan</a><a href="methodology.html">Methodology</a><a href="axes.html">Content &amp; Axes</a><a href="platform.html">Platform</a></div>
     <div><h4>Solutions</h4><a href="solutions.html">Private Schools</a><a href="solutions.html">Ministries</a><a href="solutions.html">Teachers</a><a href="solutions.html">Students</a></div>
-    <div><h4>Contact</h4><a href="contact.html">Request a Demo</a><a href="reading-vs-literacy.html">Reading vs Literacy</a><a href="faq.html">FAQ</a><a href="../contact.html">عربي</a>
+    <div><h4>Contact</h4><a href="contact.html">Request a Demo</a><a href="reading-vs-literacy.html">Reading vs Literacy</a><a href="faq.html">FAQ</a><a href="contact.html">عربي</a></div>
   </div>
   <div class="fcopy"><span>© Integrated Education Solutions — All rights reserved.</span><span>Design Prototype — Bayan Identity</span></div>
 </div></footer>

@@ -4,88 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>المحتوى والمحاور — بَيَان</title>
-<script>
-  (function() {
-    var t = localStorage.getItem('bayan-theme');
-    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
-    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
-  })();
-</script>
-<meta name="description" content="أربعة محاور معرفية في بَيَان — المحلي والحضاري والموضوعي والإسلامي — نوافذ على المعرفة والهوية.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/bayan.css">
+<link rel="stylesheet" href="assets/bayan.css?v=20260617-motif">
 </head>
-<body>
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-    <clipPath id="horseshoe-arch-clip" clipPathUnits="objectBoundingBox">
-      <path d="M 0.5,0.0 C 0.22,0.0 0.0,0.18 0.0,0.4 C 0.0,0.52 0.08,0.56 0.12,0.58 L 0.12,1.0 L 0.88,1.0 L 0.88,0.58 C 0.92,0.56 1.0,0.52 1.0,0.4 C 1.0,0.18 0.78,0.0 0.5,0.0 Z" />
-    </clipPath>
-  </defs>
-</svg>
+<body class="site-redesign">
 <div class="progress"><span id="prog"></span></div>
 <div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
 
 <header id="head"><div class="wrap bar">
   <a href="index.html" class="brand"><img src="products-extra-1.png" alt="بَيَان"></a>
+    <button class="menu-btn" id="menuBtn">☰</button>
   <nav class="nav" id="nav">
-    <a href="index.html" >الرئيسية</a>
-    <a href="about.html" >عن بَيَان</a>
-    <a href="methodology.html" >المنهجية</a>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">عن بَيَان</a>
+    <a href="methodology.html">المنهجية</a>
     <a href="axes.html" class="active">المحتوى والمحاور</a>
-    <a href="platform.html" >المنصة والمزايا</a>
-    <a href="solutions.html" >الحلول</a>
-    <a href="reading-vs-literacy.html" >القراءة مقابل القرائية</a>
-    <a href="contact.html" >تواصل</a>
+    <a href="platform.html">المنصة</a>
+    <a href="solutions.html">الحلول</a>
+    <a href="reading-vs-literacy.html">القراءة مقابل القرائية</a>
+    <a href="faq.html">الأسئلة الشائعة</a>
+      <a href="en/index.html" style="font-weight: 700; color: var(--red);">EN</a>
   </nav>
-  <div class="header-actions">
-    <a href="en/axes.html" class="lang-switcher">
-      <span>EN</span>
-      <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-    </a>
-    <a href="contact.html" class="btn btn-primary head-cta">اطلب عرضًا تعريفيًا</a>
-  </div>
-  <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+  <a href="contact.html" class="btn btn-line head-cta">اطلب عرضًا</a>
 </div></header>
 
 <main>
-<section class="page-hero bg-motif"><div class="wrap">
-  <div class="eyebrow">المحتوى والمحاور</div>
-  <h1><span>نافذةٌ على المعرفة والهوية</span></h1>
-  <p class="lead">يُعالَج كلُّ موضوعٍ من خلال أربعة محاورٍ متكاملة، فلا يكون النصّ مادةً للقراءة فحسب، بل نافذةً على المعرفة والهوية.</p>
+<section class="page-hero page-hero--axes bg-motif"><div class="wrap page-hero-layout">
+  <div class="page-hero-copy">
+    <div class="eyebrow">المحتوى والمحاور</div>
+    <h1><span>نافذةٌ على المعرفة والهوية</span></h1>
+    <p class="lead">يُعالَج كلُّ موضوعٍ من خلال أربعة محاورٍ متكاملة، فلا يكون النصّ مادةً للقراءة فحسب، بل نافذةً على المعرفة والهوية.</p>
+  </div>
+  <div class="page-visual visual-grid">
+    <div class="imgslot"><img src="images/axis-local.jpg" alt="رسم خطي للمحور المحلي" onerror="this.remove()"></div>
+    <div class="imgslot"><img src="images/axis-islamic.jpg" alt="رسم خطي للمحور الإسلامي" onerror="this.remove()"></div>
+    <div class="visual-card"><b>٤ محاور</b><span>محلي، حضاري، موضوعي، إسلامي.</span></div>
+  </div>
 </div></section>
 
 <section class="sec bg1"><div class="wrap">
   <div class="axes-grid stagger reveal">
-    <article class="axis"><div style="grid-area: image; display: flex; align-items: center; justify-content: center; padding: 20px 0;">
-      <div class="diamond-frame" style="width: 130px; height: 130px; margin: 0;">
-        <div class="diamond-img-wrap">
-          <img src="images/axis-local.jpg" onerror="this.remove()" alt="المحور المحلي — تراث وهوية">
-        </div>
-      </div>
-    </div><div class="meta"><h3>المحلي</h3><p>يربط المتعلّم بهويّته القُطرية والعربية بتدرّجٍ يراعي خصوصية كلّ قُطر. يضمّ: الحضارة والعادات والأعياد والمعالم والشخصيات، والتاريخ والجغرافيا، والفنون والآداب المحلية.</p></div></article>
-    <article class="axis"><div style="grid-area: image; display: flex; align-items: center; justify-content: center; padding: 20px 0;">
-      <div class="diamond-frame" style="width: 130px; height: 130px; margin: 0;">
-        <div class="diamond-img-wrap">
-          <img src="images/axis-historical.jpg" onerror="this.remove()" alt="المحور الحضاري — حضارات كبرى">
-        </div>
-      </div>
-    </div><div class="meta"><h3>الحضاري</h3><p>نوافذُ على الحضارات الكبرى التي صاغت الإنسانية، قديمها وحديثها. يضمّ: العربي الإسلامي، الفرعوني، الروماني، اليوناني، الصيني، الهندي، والعصر الحديث.</p></div></article>
-    <article class="axis"><div style="grid-area: image; display: flex; align-items: center; justify-content: center; padding: 20px 0;">
-      <div class="diamond-frame" style="width: 130px; height: 130px; margin: 0;">
-        <div class="diamond-img-wrap">
-          <img src="images/axis-subject.jpg" onerror="this.remove()" alt="المحور الموضوعي — علوم ومعرفة">
-        </div>
-      </div>
-    </div><div class="meta"><h3>الموضوعي</h3><p>معرفةٌ منظَّمة عبر فرعين كبيرين يغطّيان مجالات العلم والإنسان. يضمّ: العلوم والرياضيات والتقنية والهندسة (STEM)، والعلوم الإنسانية والاجتماعية والفنون والآداب (HASS).</p></div></article>
-    <article class="axis"><div style="grid-area: image; display: flex; align-items: center; justify-content: center; padding: 20px 0;">
-      <div class="diamond-frame" style="width: 130px; height: 130px; margin: 0;">
-        <div class="diamond-img-wrap">
-          <img src="images/axis-islamic.jpg" onerror="this.remove()" alt="المحور الإسلامي — مرجعية أصيلة">
-        </div>
-      </div>
-    </div><div class="meta"><h3>الإسلامي</h3><p>يصل المتعلّم بمرجعيّته الإسلامية عبر نصوصها الأصيلة، ويُؤلَّف وفق ضوابط دقيقة. يضمّ: القرآن الكريم، الحديث النبوي، الفقه الإسلامي، السيرة النبوية.</p></div></article>
+    <article class="axis"><div class="imgslot"><div class="ph"><span class="ico">⌑</span><span class="fn">images/axis-local.jpg</span><span class="desc">رسم خطّي: تراث محلي</span></div><img src="images/axis-local.jpg" onerror="this.remove()" alt="رسم خطي يرمز إلى التراث المحلي"></div><div class="meta"><h3>المحلي</h3><p>يربط المتعلّم بهويّته القُطرية والعربية بتدرّجٍ يراعي خصوصية كلّ قُطر. يضمّ: الحضارة والعادات والأعياد والمعالم والشخصيات، والتاريخ والجغرافيا، والفنون والآداب المحلية.</p></div></article>
+    <article class="axis"><div class="imgslot"><div class="ph"><span class="ico">⌑</span><span class="fn">images/axis-historical.jpg</span><span class="desc">رسم خطّي: حضارات كبرى</span></div><img src="images/axis-historical.jpg" onerror="this.remove()" alt="رسم خطي يرمز إلى الحضارات الكبرى"></div><div class="meta"><h3>الحضاري</h3><p>نوافذُ على الحضارات الكبرى التي صاغت الإنسانية، قديمها وحديثها. يضمّ: العربي الإسلامي، الفرعوني، الروماني، اليوناني، الصيني، الهندي، والعصر الحديث.</p></div></article>
+    <article class="axis"><div class="imgslot"><div class="ph"><span class="ico">⌑</span><span class="fn">images/axis-subject.jpg</span><span class="desc">رسم خطّي: علوم ومعرفة</span></div><img src="images/axis-subject.jpg" onerror="this.remove()" alt="رسم خطي يرمز إلى العلوم والمعرفة"></div><div class="meta"><h3>الموضوعي</h3><p>معرفةٌ منظَّمة عبر فرعين كبيرين يغطّيان مجالات العلم والإنسان. يضمّ: العلوم والرياضيات والتقنية والهندسة (STEM)، والعلوم الإنسانية والاجتماعية والفنون والآداب (HASS).</p></div></article>
+    <article class="axis"><div class="imgslot"><div class="ph"><span class="ico">⌑</span><span class="fn">images/axis-islamic.jpg</span><span class="desc">رسم خطّي: مصحف ونجمة هندسية</span></div><img src="images/axis-islamic.jpg" onerror="this.remove()" alt="رسم خطي يرمز إلى المحور الإسلامي"></div><div class="meta"><h3>الإسلامي</h3><p>يصل المتعلّم بمرجعيّته الإسلامية عبر نصوصها الأصيلة، ويُؤلَّف وفق ضوابط دقيقة. يضمّ: القرآن الكريم، الحديث النبوي، الفقه الإسلامي، السيرة النبوية.</p></div></article>
   </div>
 </div></section>
 
@@ -96,13 +59,7 @@
       <h3>كلُّ موضوعٍ يقترن بشخصيةٍ مُلهمة</h3>
       <p>تتقاطع مع المحاور الأربعة طبقةٌ من الشخصيات المصنّفة بأنواعها (علمية، سياسية، أدبية، فنية، دينية، اجتماعية، رياضية…) تقرن كلَّ موضوعٍ مفاهيميٍّ بشخصيةٍ ذات صلة — فيغدو التعلّم أقرب إلى القصة منه إلى التلقين.</p>
     </div>
-    <div style="display: flex; align-items: center; justify-content: center; padding: 30px; background: var(--paper-2); width: 100%; border-radius: 8px;">
-      <div class="horseshoe-arch-frame" style="max-width: 300px; width: 100%; aspect-ratio: 1/1.2; margin: 0;">
-        <div class="horseshoe-arch-inner">
-          <img src="images/personalities.jpg" onerror="this.remove()" alt="شخصيات تعليمية ملهمة">
-        </div>
-      </div>
-    </div>
+    <div class="imgslot"><div class="ph"><span class="ico">⌑</span><span class="fn">images/personalities.jpg</span><span class="desc">كولاج هادئ لظلال شخصيات مُلهمة</span></div><img src="images/personalities.jpg" onerror="this.remove()" alt="كولاج هادئ لشخصيات عربية ملهمة"></div>
   </div>
 </div></section>
 
@@ -117,7 +74,7 @@
     <div><div class="brand">بَيَان</div><p>منصة القرائية العربية — حين تصبح القراءةُ فهمًا. تطوير مجموعة المتحدة للتعليم.</p></div>
     <div><h4>استكشف</h4><a href="about.html">عن بَيَان</a><a href="methodology.html">المنهجية</a><a href="axes.html">المحتوى والمحاور</a><a href="platform.html">المنصة</a></div>
     <div><h4>الحلول</h4><a href="solutions.html">المدارس الخاصة</a><a href="solutions.html">وزارات التعليم</a><a href="solutions.html">المعلمون</a><a href="solutions.html">الطلبة</a></div>
-    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/axes.html">English</a>
+    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/index.html">English</a></div>
   </div>
   <div class="fcopy"><span>© مجموعة المتحدة للتعليم — جميع الحقوق محفوظة.</span><span>نموذج تصميم — هوية بَيَان</span></div>
 </div></footer>

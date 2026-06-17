@@ -3,18 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Platform &amp; Features — Bayan</title>
-<script>
-  (function() {
-    var t = localStorage.getItem('bayan-theme');
-    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
-    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
-  })();
-</script>
-<meta name="description" content="Bayan's digital platform — an integrated environment with role-based accounts for students, teachers, administrators, and ministries.">
+<title>Platform & Features — Bayan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/bayan.css">
+<link rel="stylesheet" href="../assets/bayan.css?v=20260617-motif">
 </head>
 <body>
 <div class="progress"><span id="prog"></span></div>
@@ -22,29 +14,24 @@
 
 <header id="head"><div class="wrap bar">
   <a href="index.html" class="brand"><img src="../products-extra-1.png" alt="Bayan"></a>
+  <button class="menu-btn" id="menuBtn">☰</button>
   <nav class="nav" id="nav">
-    <a href="index.html" >Home</a>
-    <a href="about.html" >About Bayan</a>
-    <a href="methodology.html" >Methodology</a>
-    <a href="axes.html" >Content &amp; Axes</a>
-    <a href="platform.html" class="active">Platform &amp; Features</a>
-    <a href="solutions.html" >Solutions</a>
-    <a href="reading-vs-literacy.html" >Reading vs Literacy</a>
-    <a href="contact.html" >Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Bayan</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="axes.html">Content & Axes</a>
+    <a href="platform.html" class="active">Platform</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="reading-vs-literacy.html">Reading vs Literacy</a>
+    <a href="faq.html">FAQ</a>
+    <a href="../platform.html" style="font-weight: 700; color: var(--red);">عربي</a>
   </nav>
-  <div class="header-actions">
-    <a href="../platform.html" class="lang-switcher">
-      <span>عربي</span>
-      <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-    </a>
-    <a href="contact.html" class="btn btn-primary head-cta">Request a Demo</a>
-  </div>
-  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <a href="contact.html" class="btn btn-line head-cta">Request a Demo</a>
 </div></header>
 
 <main>
 <section class="page-hero bg-motif"><div class="wrap">
-  <div class="eyebrow">Platform &amp; Features</div>
+  <div class="eyebrow">Platform & Features</div>
   <h1><span>An Integrated Digital Environment</span></h1>
   <p class="lead">Bayan does not just deliver content; it integrates it within an environment serving every role: learners read and interact, teachers assign and track, while school administrations and ministries monitor performance at scale.</p>
 </div></section>
@@ -87,14 +74,14 @@
       </div>
     </div>
     <div class="feat stagger reveal">
-      <div class="f"><div class="ic">📊</div><h3>Analytics &amp; Reports</h3><p>Student dashboards for their path across levels, teacher dashboards for individual and class performance, and administrative/ministry aggregate reports supporting data-driven decisions.</p></div>
-      <div class="f"><div class="ic">🔗</div><h3>Integration &amp; Access</h3><p>Integration with school LMS platforms and digital classroom tools, Single Sign-On (SSO) support, and a fully responsive layout across desktop, tablet, and mobile devices.</p></div>
+      <div class="f"><div class="ic">📊</div><h3>Analytics & Reports</h3><p>Student dashboards for their path across levels, teacher dashboards for individual and class performance, and administrative/ministry aggregate reports supporting data-driven decisions.</p></div>
+      <div class="f"><div class="ic">🔗</div><h3>Integration & Access</h3><p>Integration with school LMS platforms and digital classroom tools, Single Sign-On (SSO) support, and a fully responsive layout across desktop, tablet, and mobile devices.</p></div>
     </div>
   </div>
   <div class="platform-show rev">
     <div class="feat stagger reveal">
       <div class="f"><div class="ic">🛡️</div><h3>Academic Rigor</h3><p>Every piece of content undergoes specialized academic review before publication, ensuring sacred and classical heritage texts are preserved intact.</p></div>
-      <div class="f"><div class="ic">♿</div><h3>Accessibility &amp; Inclusion</h3><p>Accessibility features supporting screen readers, keyboard navigation, and alternative text for all visual elements.</p></div>
+      <div class="f"><div class="ic">♿</div><h3>Accessibility & Inclusion</h3><p>Accessibility features supporting screen readers, keyboard navigation, and alternative text for all visual elements.</p></div>
     </div>
     <div class="imgslot has-mockup reveal par" data-speed="0.04">
       <div class="live-mockup" id="mockDashboard">
@@ -153,9 +140,9 @@
 <footer><div class="wrap">
   <div class="fcols">
     <div><div class="brand">Bayan</div><p>Arabic Literacy Platform — Where reading becomes understanding. Developed by Integrated Education Solutions (IES).</p></div>
-    <div><h4>Explore</h4><a href="about.html">About Bayan</a><a href="methodology.html">Methodology</a><a href="axes.html">Content &amp; Axes</a><a href="platform.html">Platform</a></div>
+    <div><h4>Explore</h4><a href="about.html">About Bayan</a><a href="methodology.html">Methodology</a><a href="axes.html">Content & Axes</a><a href="platform.html">Platform</a></div>
     <div><h4>Solutions</h4><a href="solutions.html">Private Schools</a><a href="solutions.html">Ministries</a><a href="solutions.html">Teachers</a><a href="solutions.html">Students</a></div>
-    <div><h4>Contact</h4><a href="contact.html">Request a Demo</a><a href="reading-vs-literacy.html">Reading vs Literacy</a><a href="faq.html">FAQ</a><a href="../platform.html">عربي</a>
+    <div><h4>Contact</h4><a href="contact.html">Request a Demo</a><a href="reading-vs-literacy.html">Reading vs Literacy</a><a href="faq.html">FAQ</a><a href="../platform.html">عربي</a></div>
   </div>
   <div class="fcopy"><span>© Integrated Education Solutions — All rights reserved.</span><span>Design Prototype — Bayan Identity</span></div>
 </div></footer>

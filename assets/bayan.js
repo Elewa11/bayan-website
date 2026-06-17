@@ -26,7 +26,7 @@
   const io = new IntersectionObserver((es)=>es.forEach(e=>{
     if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
   }), {threshold:.14});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.querySelectorAll('.reveal, .stagger').forEach(el=>io.observe(el));
 
   /* count-up (Arabic-Indic) */
   const ar = n => String(n).replace(/[0-9]/g, d=>'٠١٢٣٤٥٦٧٨٩'[d]);
@@ -152,6 +152,8 @@
   injectMotif(document.querySelector('.hero'));
   injectMotif(document.querySelector('.page-hero'));
 
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = matchMedia('(pointer:fine)').matches;
   if(!reduce && fine){
     addEventListener('mousemove', function(e){
       var cx = (e.clientX / innerWidth) - 0.5;
@@ -163,75 +165,3 @@
     });
   }
 })();
-
-/* Theme Switcher & Level Card Enhancements */
-(function(){
-  const savedTheme = localStorage.getItem('bayan-theme') || 'light';
-  // Sync buttons
-  document.querySelectorAll('.theme-btn-opt').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.theme === savedTheme);
-    btn.addEventListener('click', () => {
-      const theme = btn.dataset.theme;
-      document.documentElement.classList.remove('theme-sepia', 'theme-dark');
-      if (theme === 'sepia') document.documentElement.classList.add('theme-sepia');
-      if (theme === 'dark') document.documentElement.classList.add('theme-dark');
-      localStorage.setItem('bayan-theme', theme);
-      document.querySelectorAll('.theme-btn-opt').forEach(b => {
-        b.classList.toggle('active', b.dataset.theme === theme);
-      });
-    });
-  });
-
-
-  /* Levels Bookcase interaction */
-  const popover = document.getElementById('bookPopover');
-  const popoverNum = document.getElementById('popoverNum');
-  const popoverTitle = document.getElementById('popoverTitle');
-  const popoverDesc = document.getElementById('popoverDesc');
-  
-  if (popover && popoverNum && popoverTitle && popoverDesc) {
-    const formatNum = (num, isAr) => {
-      if (!isAr) return num;
-      return String(num).replace(/[0-9]/g, d=>'٠١٢٣٤٥٦٧٨٩'[d]);
-    };
-    
-    const isArabic = document.documentElement.lang === 'ar';
-    
-    document.querySelectorAll('.book-spine').forEach(spine => {
-      const showLvl = () => {
-        const lvl = spine.dataset.lvl;
-        const title = spine.dataset.title;
-        const desc = spine.dataset.sub;
-        
-        popoverNum.textContent = formatNum(lvl, isArabic);
-        popoverTitle.textContent = title;
-        popoverDesc.textContent = desc;
-        
-        popover.classList.add('active');
-        
-        // Reset translate on all spines
-        document.querySelectorAll('.book-spine').forEach(s => {
-          s.classList.remove('active-book');
-          s.style.transform = '';
-        });
-        
-        // Highlight active book
-        spine.classList.add('active-book');
-        spine.style.transform = 'translateY(-24px) scale(1.04)';
-      };
-      
-      spine.addEventListener('mouseenter', showLvl);
-      spine.addEventListener('click', showLvl);
-    });
-  }
-  
-  // Dynamically append tail band to lvl cards for the book spine effect
-  document.querySelectorAll('.lvl').forEach(lvl => {
-    if (!lvl.querySelector('.lvl-tail-band')) {
-      const band = document.createElement('div');
-      band.className = 'lvl-tail-band';
-      lvl.appendChild(band);
-    }
-  });
-})();
-

@@ -4,49 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الأسئلة الشائعة — بَيَان</title>
-<script>
-  (function() {
-    var t = localStorage.getItem('bayan-theme');
-    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
-    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
-  })();
-</script>
-<meta name="description" content="الأسئلة الشائعة حول منصة بَيَان للقرائية العربية — إجابات عن التدرّج والمحتوى والمنصة والاشتراك.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/bayan.css">
+<link rel="stylesheet" href="assets/bayan.css?v=20260617-motif">
 </head>
-<body>
+<body class="site-redesign">
 <div class="progress"><span id="prog"></span></div>
 <div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
 
 <header id="head"><div class="wrap bar">
   <a href="index.html" class="brand"><img src="products-extra-1.png" alt="بَيَان"></a>
+    <button class="menu-btn" id="menuBtn">☰</button>
   <nav class="nav" id="nav">
-    <a href="index.html" >الرئيسية</a>
-    <a href="about.html" >عن بَيَان</a>
-    <a href="methodology.html" >المنهجية</a>
-    <a href="axes.html" >المحتوى والمحاور</a>
-    <a href="platform.html" >المنصة والمزايا</a>
-    <a href="solutions.html" >الحلول</a>
-    <a href="reading-vs-literacy.html" >القراءة مقابل القرائية</a>
-    <a href="contact.html" >تواصل</a>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">عن بَيَان</a>
+    <a href="methodology.html">المنهجية</a>
+    <a href="axes.html">المحتوى والمحاور</a>
+    <a href="platform.html">المنصة</a>
+    <a href="solutions.html">الحلول</a>
+    <a href="reading-vs-literacy.html">القراءة مقابل القرائية</a>
+    <a href="faq.html" class="active">الأسئلة الشائعة</a>
+      <a href="en/index.html" style="font-weight: 700; color: var(--red);">EN</a>
   </nav>
-  <div class="header-actions">
-    <a href="en/faq.html" class="lang-switcher">
-      <span>EN</span>
-      <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-    </a>
-    <a href="contact.html" class="btn btn-primary head-cta">اطلب عرضًا تعريفيًا</a>
-  </div>
-  <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+  <a href="contact.html" class="btn btn-line head-cta">اطلب عرضًا</a>
 </div></header>
 
 <main>
-<section class="page-hero bg-motif"><div class="wrap">
-  <div class="eyebrow">الأسئلة الشائعة</div>
-  <h1><span>أسئلة يطرحها شركاؤنا</span></h1>
-  <p class="lead">إجاباتٌ موجزة عن أكثر ما يُسأل عن بَيَان. لم تجد سؤالك؟ تواصل معنا.</p>
+<section class="page-hero page-hero--faq bg-motif"><div class="wrap page-hero-layout">
+  <div class="page-hero-copy">
+    <div class="eyebrow">الأسئلة الشائعة</div>
+    <h1><span>أسئلة يطرحها شركاؤنا</span></h1>
+    <p class="lead">إجاباتٌ موجزة عن أكثر ما يُسأل عن بَيَان. لم تجد سؤالك؟ تواصل معنا.</p>
+  </div>
+  <div class="page-visual page-visual--cards">
+    <div class="faq-tile"><b>٦</b><span>إجابات مختصرة</span></div>
+    <div class="faq-tile"><b>؟</b><span>وضوح قبل العرض</span></div>
+    <div class="visual-card"><b>سريع وواضح</b><span>أهم الأسئلة قبل التواصل.</span></div>
+  </div>
 </div></section>
 
 <section class="sec bg1"><div class="wrap"><div class="acc reveal">
@@ -69,7 +63,7 @@
     <div><div class="brand">بَيَان</div><p>منصة القرائية العربية — حين تصبح القراءةُ فهمًا. تطوير مجموعة المتحدة للتعليم.</p></div>
     <div><h4>استكشف</h4><a href="about.html">عن بَيَان</a><a href="methodology.html">المنهجية</a><a href="axes.html">المحتوى والمحاور</a><a href="platform.html">المنصة</a></div>
     <div><h4>الحلول</h4><a href="solutions.html">المدارس الخاصة</a><a href="solutions.html">وزارات التعليم</a><a href="solutions.html">المعلمون</a><a href="solutions.html">الطلبة</a></div>
-    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/faq.html">English</a>
+    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/index.html">English</a></div>
   </div>
   <div class="fcopy"><span>© مجموعة المتحدة للتعليم — جميع الحقوق محفوظة.</span><span>نموذج تصميم — هوية بَيَان</span></div>
 </div></footer>

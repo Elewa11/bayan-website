@@ -4,49 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>المنهجية — بَيَان</title>
-<script>
-  (function() {
-    var t = localStorage.getItem('bayan-theme');
-    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
-    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
-  })();
-</script>
-<meta name="description" content="منهجية بَيَان العلمية — ستة مستويات قرائية متدرّجة ومساران للمحتوى يبنيان الفهم القرائي من الروضة إلى الجامعة.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/bayan.css">
+<link rel="stylesheet" href="assets/bayan.css?v=20260617-motif">
 </head>
-<body>
+<body class="site-redesign">
 <div class="progress"><span id="prog"></span></div>
 <div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
 
 <header id="head"><div class="wrap bar">
   <a href="index.html" class="brand"><img src="products-extra-1.png" alt="بَيَان"></a>
+    <button class="menu-btn" id="menuBtn">☰</button>
   <nav class="nav" id="nav">
-    <a href="index.html" >الرئيسية</a>
-    <a href="about.html" >عن بَيَان</a>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">عن بَيَان</a>
     <a href="methodology.html" class="active">المنهجية</a>
-    <a href="axes.html" >المحتوى والمحاور</a>
-    <a href="platform.html" >المنصة والمزايا</a>
-    <a href="solutions.html" >الحلول</a>
-    <a href="reading-vs-literacy.html" >القراءة مقابل القرائية</a>
-    <a href="contact.html" >تواصل</a>
+    <a href="axes.html">المحتوى والمحاور</a>
+    <a href="platform.html">المنصة</a>
+    <a href="solutions.html">الحلول</a>
+    <a href="reading-vs-literacy.html">القراءة مقابل القرائية</a>
+    <a href="faq.html">الأسئلة الشائعة</a>
+      <a href="en/index.html" style="font-weight: 700; color: var(--red);">EN</a>
   </nav>
-  <div class="header-actions">
-    <a href="en/methodology.html" class="lang-switcher">
-      <span>EN</span>
-      <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-    </a>
-    <a href="contact.html" class="btn btn-primary head-cta">اطلب عرضًا تعريفيًا</a>
-  </div>
-  <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+  <a href="contact.html" class="btn btn-line head-cta">اطلب عرضًا</a>
 </div></header>
 
 <main>
-<section class="page-hero bg-motif"><div class="wrap">
-  <div class="eyebrow">المنهجية</div>
-  <h1><span>كيف نبني القارئ المفكّر</span></h1>
-  <p class="lead">ستة مستويات، ومساران للمحتوى، وبناءٌ للدرس في عشرة أقسام — هندسةٌ تربوية تنقل المتعلّم من النصّ إلى الفهم.</p>
+<section class="page-hero page-hero--method bg-motif"><div class="wrap page-hero-layout">
+  <div class="page-hero-copy">
+    <div class="eyebrow">المنهجية</div>
+    <h1><span>كيف نبني القارئ المفكّر</span></h1>
+    <p class="lead">ستة مستويات، ومساران للمحتوى، وبناءٌ للدرس في عشرة أقسام — هندسةٌ تربوية تنقل المتعلّم من النصّ إلى الفهم.</p>
+  </div>
+  <div class="page-visual page-visual--cards">
+    <div class="method-map">
+      <div><b>٦</b><span>مستويات</span></div>
+      <div><b>٢</b><span>مساران</span></div>
+      <div><b>١٠</b><span>أقسام للدرس</span></div>
+    </div>
+    <div class="visual-card"><b>هندسة الدرس</b><span>من النص إلى الفهم ثم الإنتاج.</span></div>
+  </div>
 </div></section>
 
 <section class="sec bg1"><div class="wrap">
@@ -94,8 +91,8 @@
 <section class="sec bg2"><div class="wrap">
   <div class="sec-head reveal"><div class="eyebrow">المساران</div><h2>مساران متكاملان للمحتوى</h2></div>
   <div class="tracks stagger reveal">
-    <div class="track"><div class="tn">المسار ٠١</div><h3>المسار التوليدي</h3><p>محتوًى مؤلَّفٌ تربويًّا يعالج الموضوع الواحد عبر المستويات الستة وفق بناءٍ معرفي موحّد، فيُصاغ النصّ بما يناسب كلَّ مستوى عمقًا ومفرداتٍ وأسلوبًا.</p></div>
-    <div class="track"><div class="tn">المسار ٠٢</div><h3>المسار الأصيل</h3><p>نصوصٌ مصدرية موثّقة (قرآن، حديث، شعر، نثر تراثي، حكايات) في درسٍ بمستوًى واحد يختاره المتخصّص، مع صون النصّ كما ورد دون تعديل.</p></div>
+    <div class="track"><div class="tn">TRACK 01</div><h3>المسار التوليدي</h3><p>محتوًى مؤلَّفٌ تربويًّا يعالج الموضوع الواحد عبر المستويات الستة وفق بناءٍ معرفي موحّد، فيُصاغ النصّ بما يناسب كلَّ مستوى عمقًا ومفرداتٍ وأسلوبًا.</p></div>
+    <div class="track"><div class="tn">TRACK 02</div><h3>المسار الأصيل</h3><p>نصوصٌ مصدرية موثّقة (قرآن، حديث، شعر، نثر تراثي، حكايات) في درسٍ بمستوًى واحد يختاره المتخصّص، مع صون النصّ كما ورد دون تعديل.</p></div>
   </div>
 </div></section>
 
@@ -131,7 +128,7 @@
     <div><div class="brand">بَيَان</div><p>منصة القرائية العربية — حين تصبح القراءةُ فهمًا. تطوير مجموعة المتحدة للتعليم.</p></div>
     <div><h4>استكشف</h4><a href="about.html">عن بَيَان</a><a href="methodology.html">المنهجية</a><a href="axes.html">المحتوى والمحاور</a><a href="platform.html">المنصة</a></div>
     <div><h4>الحلول</h4><a href="solutions.html">المدارس الخاصة</a><a href="solutions.html">وزارات التعليم</a><a href="solutions.html">المعلمون</a><a href="solutions.html">الطلبة</a></div>
-    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/methodology.html">English</a>
+    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/index.html">English</a></div>
   </div>
   <div class="fcopy"><span>© مجموعة المتحدة للتعليم — جميع الحقوق محفوظة.</span><span>نموذج تصميم — هوية بَيَان</span></div>
 </div></footer>

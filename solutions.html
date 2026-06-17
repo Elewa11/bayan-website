@@ -4,59 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الحلول — بَيَان</title>
-<script>
-  (function() {
-    var t = localStorage.getItem('bayan-theme');
-    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
-    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
-  })();
-</script>
-<meta name="description" content="حلول بَيَان للمدارس الخاصة ووزارات التعليم والمعلّمين والطلبة — منهج قرائيّ متدرّج يتكامل مع مناهجكم.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/bayan.css">
+<link rel="stylesheet" href="assets/bayan.css?v=20260617-motif">
 </head>
-<body>
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-    <clipPath id="horseshoe-arch-clip" clipPathUnits="objectBoundingBox">
-      <path d="M 0.5,0.0 C 0.22,0.0 0.0,0.18 0.0,0.4 C 0.0,0.52 0.08,0.56 0.12,0.58 L 0.12,1.0 L 0.88,1.0 L 0.88,0.58 C 0.92,0.56 1.0,0.52 1.0,0.4 C 1.0,0.18 0.78,0.0 0.5,0.0 Z" />
-    </clipPath>
-  </defs>
-</svg>
+<body class="site-redesign">
 <div class="progress"><span id="prog"></span></div>
 <div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
 
 <header id="head"><div class="wrap bar">
   <a href="index.html" class="brand"><img src="products-extra-1.png" alt="بَيَان"></a>
+    <button class="menu-btn" id="menuBtn">☰</button>
   <nav class="nav" id="nav">
-    <a href="index.html" >الرئيسية</a>
-    <a href="about.html" >عن بَيَان</a>
-    <a href="methodology.html" >المنهجية</a>
-    <a href="axes.html" >المحتوى والمحاور</a>
-    <a href="platform.html" >المنصة والمزايا</a>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">عن بَيَان</a>
+    <a href="methodology.html">المنهجية</a>
+    <a href="axes.html">المحتوى والمحاور</a>
+    <a href="platform.html">المنصة</a>
     <a href="solutions.html" class="active">الحلول</a>
-    <a href="reading-vs-literacy.html" >القراءة مقابل القرائية</a>
-    <a href="contact.html" >تواصل</a>
+    <a href="reading-vs-literacy.html">القراءة مقابل القرائية</a>
+    <a href="faq.html">الأسئلة الشائعة</a>
+      <a href="en/solutions.html" style="font-weight: 700; color: var(--red);">EN</a>
   </nav>
-  <div class="header-actions">
-    <a href="en/solutions.html" class="lang-switcher">
-      <span>EN</span>
-      <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-    </a>
-    <a href="contact.html" class="btn btn-primary head-cta">اطلب عرضًا تعريفيًا</a>
-  </div>
-  <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+  <a href="contact.html" class="btn btn-line head-cta">اطلب عرضًا</a>
 </div></header>
 
 <main>
-<section class="page-hero bg-motif"><div class="wrap">
-  <div class="eyebrow">الحلول</div>
-  <h1><span>بَيَان لكلّ جمهور</span></h1>
-  <p class="lead">لكلّ شريكٍ في العملية التعليمية حاجةٌ مختلفة — وبَيَان تستجيب لكلٍّ منها برسالةٍ وأدواتٍ مخصّصة.</p>
+<section class="page-hero page-hero--solutions bg-motif"><div class="wrap page-hero-layout">
+  <div class="page-hero-copy">
+    <div class="eyebrow">الحلول</div>
+    <h1><span>بَيَان لكلّ جمهور</span></h1>
+    <p class="lead">لكلّ شريكٍ في العملية التعليمية حاجةٌ مختلفة — وبَيَان تستجيب لكلٍّ منها برسالةٍ وأدواتٍ مخصّصة.</p>
+  </div>
+  <div class="page-visual visual-grid">
+    <div class="imgslot"><img src="images/sol-schools.jpg" alt="بيئة مدرسية حديثة" onerror="this.remove()"></div>
+    <div class="imgslot"><img src="images/sol-students.jpg" alt="طالب يقرأ بثقة" onerror="this.remove()"></div>
+    <div class="visual-card"><b>٤ شرائح</b><span>مدارس، وزارات، معلمون، طلبة.</span></div>
+  </div>
 </div></section>
 
-<section class="sec bg1"><div class="wrap">
+<section class="sec bg1 solution-flow"><div class="wrap">
   <div class="split reveal" style="margin-bottom:30px">
     <div><div class="eyebrow">للمدارس الخاصة</div><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin:12px 0">تميُّزٌ ونتائج في آنٍ واحد</h2><p style="color:var(--body)">تبحث المدرسة الخاصة عمّا يميّزها ويرفع نتائج طلبتها معًا — وضعف القرائية أحد أكثر ما يقلق أولياء الأمور.</p>
       <div class="problem-list">
@@ -64,42 +51,18 @@
         <div class="it"><span class="mk">✓</span><p>يُدمَج مع منهجك القائم لا ليزاحمه.</p></div>
         <div class="it"><span class="mk">✓</span><p>لوحات متابعة تُظهر تقدّم كلّ صفٍّ وطالب وتجعل القرائية ميزةً تسويقية.</p></div>
       </div></div>
-    <div style="display: flex; align-items: center; justify-content: center; padding: 10px; width: 100%;">
-      <div class="horseshoe-arch-frame" style="max-width: 380px; width: 100%; aspect-ratio: 1/1.2; margin: 0;">
-        <div class="horseshoe-arch-inner">
-          <img src="images/sol-schools.jpg" onerror="this.remove()" alt="مبنى مدرسة خاصة حديثة">
-        </div>
-      </div>
-    </div>
+    <div class="imgslot" style="aspect-ratio:3/2;border-radius:16px"><div class="ph"><span class="ico">🏫</span><span class="fn">images/sol-schools.jpg</span><span class="desc">صفّ مدرسة خاصة هادئ ومضيء</span></div><img src="images/sol-schools.jpg" onerror="this.remove()" alt="فصل مدرسي في مدرسة خاصة"></div>
   </div>
   <div class="split reveal" style="margin-bottom:30px">
-    <div style="display: flex; align-items: center; justify-content: center; padding: 10px; width: 100%;">
-      <div class="horseshoe-arch-frame" style="max-width: 380px; width: 100%; aspect-ratio: 1/1.2; margin: 0;">
-        <div class="horseshoe-arch-inner">
-          <img src="images/sol-ministry.jpg" onerror="this.remove()" alt="وزارة التعليم ومتابعة الأداء">
-        </div>
-      </div>
-    </div>
+    <div class="imgslot" style="aspect-ratio:3/2;border-radius:16px"><div class="ph"><span class="ico">🏛️</span><span class="fn">images/sol-ministry.jpg</span><span class="desc">قاعة قرار تعليمي على نطاق وطني</span></div><img src="images/sol-ministry.jpg" onerror="this.remove()" alt="قاعة قرار تعليمي على نطاق وطني"></div>
     <div><div class="eyebrow">لوزارات التعليم</div><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin:12px 0">حلٌّ على مستوى المنظومة</h2><p style="color:var(--body)">يمثّل ضعف القرائية تحدّيًا على مستوى النظام التعليمي بأكمله، يصعب معالجته بحلولٍ متفرّقة أو محتوًى غير متّسق. تقدّم بَيَان حلًّا منهجيًّا قابلًا للتوسّع، يُواءَم مع المراحل الوطنية، ويربط القرائية بالهوية والحضارة والمعرفة والمرجعية الإسلامية — مع لوحاتٍ تجميعية ومعايير موحّدة لقياس القرائية على نطاقٍ واسع.</p></div>
   </div>
   <div class="split reveal" style="margin-bottom:30px">
     <div><div class="eyebrow">للمعلمين</div><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin:12px 0">يرفع عنك عبء الإعداد</h2><p style="color:var(--body)">يقضي معلّم العربية وقتًا طويلًا في إعداد المادة وضبط مستواها وتصحيحها. تخفّف بَيَان عنك هذا العبء: محتوًى جاهزٌ مبنيٌّ على أسسٍ علمية، بناءٌ واضح للدرس من النصّ إلى الأنشطة، تصحيحٌ تلقائيّ للاختبارات البعدية، وأدوات تكليفٍ ومتابعةٍ مرنة — فيتفرّغ المعلّم لما يُجيده: التدريس وتوجيه الفهم.</p></div>
-    <div style="display: flex; align-items: center; justify-content: center; padding: 10px; width: 100%;">
-      <div class="horseshoe-arch-frame" style="max-width: 380px; width: 100%; aspect-ratio: 1/1.2; margin: 0;">
-        <div class="horseshoe-arch-inner">
-          <img src="images/sol-teachers.jpg" onerror="this.remove()" alt="معلمة تساعد طالباً في الفصل">
-        </div>
-      </div>
-    </div>
+    <div class="imgslot" style="aspect-ratio:3/2;border-radius:16px"><div class="ph"><span class="ico">👩‍🏫</span><span class="fn">images/sol-teachers.jpg</span><span class="desc">معلّمة تدير نقاشًا صفّيًا</span></div><img src="images/sol-teachers.jpg" onerror="this.remove()" alt="معلمة تدير نقاشا صفيا مع الطلاب"></div>
   </div>
   <div class="split reveal">
-    <div style="display: flex; align-items: center; justify-content: center; padding: 10px; width: 100%;">
-      <div class="horseshoe-arch-frame" style="max-width: 380px; width: 100%; aspect-ratio: 1/1.2; margin: 0;">
-        <div class="horseshoe-arch-inner">
-          <img src="images/sol-students.jpg" onerror="this.remove()" alt="طلاب يقرؤون ويتعلمون معاً">
-        </div>
-      </div>
-    </div>
+    <div class="imgslot" style="aspect-ratio:3/2;border-radius:16px"><div class="ph"><span class="ico">🎓</span><span class="fn">images/sol-students.jpg</span><span class="desc">طالب يقرأ بشغفٍ وثقة</span></div><img src="images/sol-students.jpg" onerror="this.remove()" alt="طالب يقرأ بثقة داخل بيئة تعليمية"></div>
     <div><div class="eyebrow">للطلبة</div><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin:12px 0">رحلةٌ بمستواك تمامًا</h2><p style="color:var(--body)">يُحبَط الطالب حين يُواجَه بنصٍّ أعلى من مستواه، ويملّ حين يكون أدنى منه، وينفصل عن القراءة حين لا يجد فيها ما يمسّ عالمه. تقدّم لك بَيَان رحلةً قرائيةً بمستواك تمامًا، ومحتوًى غنيًّا يربطك بهويّتك وحضارتك وعالمك المعرفي، واقترانُ كلّ موضوعٍ بشخصيةٍ مُلهمة يجعل التعلّم أقرب إلى القصة.</p>
       <div class="ministat"><b>٦</b><span>مستويات توافق مستوى كلّ طالبٍ تمامًا</span></div></div>
   </div>
@@ -116,7 +79,7 @@
     <div><div class="brand">بَيَان</div><p>منصة القرائية العربية — حين تصبح القراءةُ فهمًا. تطوير مجموعة المتحدة للتعليم.</p></div>
     <div><h4>استكشف</h4><a href="about.html">عن بَيَان</a><a href="methodology.html">المنهجية</a><a href="axes.html">المحتوى والمحاور</a><a href="platform.html">المنصة</a></div>
     <div><h4>الحلول</h4><a href="solutions.html">المدارس الخاصة</a><a href="solutions.html">وزارات التعليم</a><a href="solutions.html">المعلمون</a><a href="solutions.html">الطلبة</a></div>
-    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/solutions.html">English</a>
+    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/solutions.html">English</a></div>
   </div>
   <div class="fcopy"><span>© مجموعة المتحدة للتعليم — جميع الحقوق محفوظة.</span><span>نموذج تصميم — هوية بَيَان</span></div>
 </div></footer>

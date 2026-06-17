@@ -3,543 +3,256 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>بَيَان — حين تصبح القراءةُ فهمًا</title>
-<script>
-  (function() {
-    var t = localStorage.getItem('bayan-theme');
-    if (t === 'sepia') document.documentElement.classList.add('theme-sepia');
-    else if (t === 'dark') document.documentElement.classList.add('theme-dark');
-  })();
-</script>
-<meta name="description" content="منصة بَيَان للقرائية العربية — رحلة قرائية متدرّجة عبر ستة مستويات تبني القارئ المفكّر.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>بَيَان — حين تصبح القراءة فهمًا</title>
+<meta name="description" content="منصة بَيَان للقرائية العربية: رحلة قرائية متدرجة تبني القارئ المفكر عبر مستويات ومحاور معرفية ومنصة رقمية متكاملة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/bayan.css">
+<link rel="icon" type="image/png" href="products-extra-1.png">
+<link rel="stylesheet" href="assets/bayan.css?v=20260617-motif">
 </head>
-<body>
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-    <clipPath id="horseshoe-arch-clip" clipPathUnits="objectBoundingBox">
-      <path d="M 0.5,0.0 C 0.22,0.0 0.0,0.18 0.0,0.4 C 0.0,0.52 0.08,0.56 0.12,0.58 L 0.12,1.0 L 0.88,1.0 L 0.88,0.58 C 0.92,0.56 1.0,0.52 1.0,0.4 C 1.0,0.18 0.78,0.0 0.5,0.0 Z" />
-    </clipPath>
-  </defs>
-</svg>
+<body class="site-redesign premium-hero-page">
 <div class="progress"><span id="prog"></span></div>
 <div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div>
 
-<header id="head"><div class="wrap bar">
-  <a href="index.html" class="brand"><img src="products-extra-1.png" alt="بَيَان"></a>
-  <nav class="nav" id="nav">
-    <a href="index.html" class="active">الرئيسية</a>
-    <a href="about.html" >عن بَيَان</a>
-    <a href="methodology.html" >المنهجية</a>
-    <a href="axes.html" >المحتوى والمحاور</a>
-    <a href="platform.html" >المنصة والمزايا</a>
-    <a href="solutions.html" >الحلول</a>
-    <a href="reading-vs-literacy.html" >القراءة مقابل القرائية</a>
-    <a href="contact.html" >تواصل</a>
-  </nav>
-  <div class="header-actions">
-    <a href="en/index.html" class="lang-switcher">
-      <span>EN</span>
-      <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-    </a>
-    <a href="contact.html" class="btn btn-primary head-cta">اطلب عرضًا تعريفيًا</a>
+<header id="head" class="site-header">
+  <div class="wrap bar">
+    <a href="index.html" class="brand"><img src="products-extra-1.png" alt="بَيَان"></a>
+    <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="about.html">عن بَيَان</a>
+      <a href="methodology.html">المنهجية</a>
+      <a href="axes.html">المحتوى والمحاور</a>
+      <a href="platform.html">المنصة والمزايا</a>
+      <a href="solutions.html">الحلول</a>
+      <a href="reading-vs-literacy.html">القراءة مقابل القرائية</a>
+      <a href="contact.html">تواصل</a>
+    </nav>
+    <div class="header-actions">
+      <a href="index.html" class="language-switch active">ع</a>
+      <span>|</span>
+      <a href="en/index.html" class="language-switch">EN</a>
+      <a href="contact.html" class="btn btn-primary head-cta">اطلب عرضًا تعريفيًا</a>
+    </div>
   </div>
-  <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
-</div></header>
+</header>
 
 <main>
-<section class="hero-premium">
-  <div class="wrap hero-premium-grid">
-    
-    <!-- Right column (Visual) -->
-    <div class="hero-visual-col">
-      <img src="images/hero.png" alt="طالب منصة بيان للقرائية العربية يقرأ بتركيز">
+  <section class="premium-hero" aria-labelledby="premiumHeroTitle">
+    <div class="wrap premium-hero-grid">
+      <div class="hero-copy reveal">
+        <div class="hero-badge"><span></span>من رياض الأطفال إلى الجامعة</div>
+        <h1 id="premiumHeroTitle">
+          <span>حين تصبح</span>
+          <strong>القراءةُ فهمًا</strong>
+        </h1>
+        <p class="lead">منصة بَيَان للقرائية العربية، رحلة متدرجة عبر ستة مستويات تبني القارئ المفكر لا الناطق فحسب، بمحتوى يصل المتعلم بهويته وعالمه.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary magnetic">اطلب عرضًا تعريفيًا</a>
+          <a href="methodology.html" class="btn btn-line magnetic">استكشف المنهجية</a>
+        </div>
+        <div class="trust-indicators" aria-label="مؤشرات الثقة">
+          <span>٦ مستويات قرائية</span>
+          <span>محتوى عربي أصيل</span>
+          <span>مراجعة علمية</span>
+          <span>قياس الفهم والتقدم</span>
+        </div>
+      </div>
+      <div class="premium-visual reveal" aria-label="طالب عربي يقرأ كتابًا">
+        <img class="hero-watermark-logo" src="products-extra-1.png" alt="" aria-hidden="true">
+        <span class="floating-letter letter-1">ع</span>
+        <span class="floating-letter letter-2">ق</span>
+        <span class="floating-letter letter-3">ف</span>
+        <span class="floating-letter letter-4">ن</span>
+        <div class="student-photo-card">
+          <img src="images/hero-bayan-student-premium.png" alt="طالب عربي يقرأ كتابًا بتركيز" onerror="this.remove()">
+        </div>
+        <div class="visual-metric">
+          <b>٦</b>
+          <span>مستويات متدرجة</span>
+        </div>
+      </div>
     </div>
-    
-    <!-- Left column (Content) -->
-    <div class="hero-content-col">
-      <div class="hero-badge">من رياض الأطفال إلى الجامعة</div>
-      <h1>حين تصبح <span class="highlight">القراءةُ فَهْمًا</span></h1>
-      <p class="sub">منصة بَيَان للقرائية العربية، رحلةٌ متدرجة عبر ستة مستويات، تبني القارئَ المفكرَ لا الناطقَ فحسب، بمحتوى يصل المتعلمَ بهويته وعالمه.</p>
-      
-      <div class="hero-ctas">
-        <a href="contact.html" class="btn-premium btn-premium-primary">
-          <span>اطلب عرضًا تعريفيًا</span>
-          <span class="btn-circle">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          </span>
+  </section>
+
+  <section class="signal-strip">
+    <div class="wrap kpi-row reveal">
+      <div><b data-count="6">٠</b><span>مستويات قرائية</span></div>
+      <div><b data-count="4">٠</b><span>محاور معرفية</span></div>
+      <div><b data-count="10">٠</b><span>أقسام للدرس</span></div>
+      <div><b data-count="2">٠</b><span>مساران للمحتوى</span></div>
+    </div>
+  </section>
+
+  <section class="section section-problem" id="journey">
+    <div class="wrap two-col">
+      <div class="content-block reveal">
+        <div class="eyebrow">لماذا بَيَان؟</div>
+        <h2>الفجوة ليست في القراءة وحدها، بل في الفهم.</h2>
+        <p>يُتقن كثير من المتعلمين فك رموز الكلمات ونطقها، لكنهم يعجزون عن فهم ما يقرؤون أو تحليله. وتتفاقم المشكلة بندرة المحتوى القرائي العربي المتدرج المبني على أسس علمية.</p>
+        <div class="compact-list">
+          <div><b>قراءة بلا فهم</b><span>يقرأ المتعلم النص كاملًا دون أن يبلغ مغزاه.</span></div>
+          <div><b>محتوى غير مضبوط</b><span>نصوص غير مضبوطة المستوى أو غير مناسبة للمرحلة.</span></div>
+          <div><b>انفصال عن الهوية</b><span>نصوص لا تمس عالم المتعلم الثقافي والحضاري.</span></div>
+        </div>
+      </div>
+      <div class="image-frame reveal">
+        <img src="images/problem.jpg" alt="طالبة تقرأ كتابا في ضوء هادئ" onerror="this.remove()">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-system bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">نظام بَيَان</div>
+        <h2>منهجية تضبط التدرج، ومحتوى يصنع المعنى، ومنصة تقيس الأثر.</h2>
+        <p>تجمع بَيَان بين بناء تربوي للمستويات، ومحاور معرفية متصلة بالهوية، وبيئة رقمية تجعل القراءة قابلة للتطبيق والمتابعة.</p>
+      </div>
+      <div class="pillars reveal">
+        <a class="pillar" href="methodology.html">
+          <span>01</span>
+          <h3>المنهجية</h3>
+          <p>ستة مستويات ومساران للمحتوى وبناء درس ينقل المتعلم من النص إلى الفهم ثم الإنتاج.</p>
         </a>
-        <a href="methodology.html" class="btn-premium btn-premium-secondary">
-          <span>استكشف المنهجية</span>
-          <span class="btn-circle">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          </span>
+        <a class="pillar" href="axes.html">
+          <span>02</span>
+          <h3>المحتوى</h3>
+          <p>أربعة محاور معرفية تجعل النص نافذة على الهوية والمعرفة، لا تمرين قراءة فقط.</p>
+        </a>
+        <a class="pillar" href="platform.html">
+          <span>03</span>
+          <h3>المنصة</h3>
+          <p>بيئة رقمية تخدم الطالب والمعلم والإدارة والوزارة بصلاحيات وتقارير لكل دور.</p>
         </a>
       </div>
-      
-      <!-- Trust Indicators -->
-      <div class="hero-trust">
-        <div class="trust-item">
-          <div class="trust-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-          </div>
-          <div class="trust-text">
-            <h4>ستة مستويات</h4>
-            <p>منهجية متكاملة</p>
-          </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">الرحلة القرائية</div>
+        <h2>تدرج محسوب من الروضة إلى الجامعة.</h2>
+      </div>
+      <div class="level-rail reveal">
+        <div><b>١</b><span>رياض الأطفال</span><small>سردي · ضبط كامل</small></div>
+        <div><b>٢</b><span>ابتدائي مبكر</span><small>سردي · ضبط كامل</small></div>
+        <div><b>٣</b><span>ابتدائي</span><small>سردي · ضبط كامل</small></div>
+        <div><b>٤</b><span>إعدادي</span><small>تفسيري · ضبط أساسي</small></div>
+        <div><b>٥</b><span>ثانوي</span><small>تفسيري · ضبط جزئي</small></div>
+        <div><b>٦</b><span>جامعي</span><small>حجاجي · ضبط مخفف</small></div>
+      </div>
+      <p class="section-note reveal">تبقى النصوص القرآنية مضبوطة كما وردت في مصدرها دون أي تخفيف للشكل في أي مستوى.</p>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">المحتوى المعرفي</div>
+        <h2>أربعة محاور تجعل القراءة بابًا للمعرفة والهوية.</h2>
+      </div>
+      <div class="axis-redesign-grid reveal">
+        <article>
+          <img src="images/axis-local.jpg" alt="رسم خطي يرمز إلى التراث المحلي" onerror="this.remove()">
+          <h3>المحلي</h3>
+          <p>الحضارة والعادات والمعالم والفنون والآداب المحلية.</p>
+        </article>
+        <article>
+          <img src="images/axis-historical.jpg" alt="رسم خطي يرمز إلى الحضارات الكبرى" onerror="this.remove()">
+          <h3>الحضاري</h3>
+          <p>نوافذ على الحضارات الكبرى: العربية الإسلامية والفرعونية والرومانية واليونانية والصينية والهندية.</p>
+        </article>
+        <article>
+          <img src="images/axis-subject.jpg" alt="رسم خطي يرمز إلى العلوم والمعرفة" onerror="this.remove()">
+          <h3>الموضوعي</h3>
+          <p>العلوم والتقنية والهندسة والرياضيات، والإنسانيات والفنون.</p>
+        </article>
+        <article>
+          <img src="images/axis-islamic.jpg" alt="رسم خطي يرمز إلى المحور الإسلامي" onerror="this.remove()">
+          <h3>الإسلامي</h3>
+          <p>القرآن الكريم، الحديث النبوي، الفقه الإسلامي، والسيرة النبوية وفق ضوابط دقيقة.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-platform">
+    <div class="wrap two-col">
+      <div class="image-frame reveal">
+        <img src="images/platform-dashboard.jpg" alt="واجهة لوحة تحكم منصة بيان" onerror="this.remove()">
+      </div>
+      <div class="content-block reveal">
+        <div class="eyebrow">المنصة</div>
+        <h2>بيئة رقمية تخدم كل دور.</h2>
+        <p>المتعلم يقرأ ويتفاعل، والمعلم يكلف ويقيم ويتابع، والإدارة والوزارة ترصد الأداء على نطاق واسع.</p>
+        <div class="role-grid">
+          <div><b>الطالب</b><span>قراءة وتفاعل وأنشطة.</span></div>
+          <div><b>المعلم</b><span>تكليف وتقييم ومتابعة.</span></div>
+          <div><b>الإدارة</b><span>تقارير صفية وتجميعية.</span></div>
+          <div><b>الوزارة</b><span>رصد واسع ومعايير موحدة.</span></div>
         </div>
-        <div class="trust-item">
-          <div class="trust-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 11 11 13 15 9"></polyline></svg>
-          </div>
-          <div class="trust-text">
-            <h4>معتمد علميًا</h4>
-            <p>ومراجع من متخصصين</p>
-          </div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-          </div>
-          <div class="trust-text">
-            <h4>محتوى عربي</h4>
-            <p>أصيل ومتدرج</p>
-          </div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-          </div>
-          <div class="trust-text">
-            <h4>قياس الفهم</h4>
-            <p>وتحليل التقدم</p>
-          </div>
-        </div>
+        <a href="platform.html" class="btn btn-line">تفاصيل المنصة</a>
       </div>
-      
     </div>
-  </div>
-  
-  <div class="hero-scroll-down">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-  </div>
-</section>
+  </section>
 
-<section class="sec bg1" style="padding-block:clamp(54px,8vh,90px)">
-  <div class="wrap stats-octagon stagger reveal">
-    <div class="stat-octagon">
-      <div class="octagon-wrap">
-        <div class="octagon-star"></div>
-        <div class="octagon-star-inner"></div>
-        <div class="num" data-count="6">٠</div>
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">لمن بَيَان؟</div>
+        <h2>حلول حسب احتياج كل شريك في العملية التعليمية.</h2>
       </div>
-      <div class="lbl">مستويات قرائية</div>
-      <div class="sub">من الروضة إلى الجامعة</div>
-    </div>
-    <div class="stat-octagon">
-      <div class="octagon-wrap">
-        <div class="octagon-star"></div>
-        <div class="octagon-star-inner"></div>
-        <div class="num" data-count="4">٠</div>
+      <div class="audience-redesign reveal">
+        <a href="solutions.html">
+          <img src="images/sol-schools.jpg" alt="بيئة مدرسية حديثة" onerror="this.remove()">
+          <h3>المدارس الخاصة</h3>
+          <p>منهج قرائي متدرج جاهز يرفع النتائج ويتكامل مع المنهج القائم.</p>
+        </a>
+        <a href="solutions.html">
+          <img src="images/sol-ministry.jpg" alt="قاعة قرار تعليمي على نطاق وطني" onerror="this.remove()">
+          <h3>وزارات التعليم</h3>
+          <p>حل منهجي قابل للتوسع يواكب المراحل الوطنية بمعايير موحدة.</p>
+        </a>
+        <a href="solutions.html">
+          <img src="images/sol-teachers.jpg" alt="معلمة تدير نقاشا صفيا مع الطلاب" onerror="this.remove()">
+          <h3>المعلمون</h3>
+          <p>محتوى جاهز وتصحيح تلقائي، ليتفرغ المعلم لتوجيه الفهم.</p>
+        </a>
+        <a href="solutions.html">
+          <img src="images/sol-students.jpg" alt="طالب يقرأ بثقة داخل بيئة تعليمية" onerror="this.remove()">
+          <h3>الطلبة</h3>
+          <p>رحلة بمستواهم ومحتوى يربطهم بهويتهم وشخصية ملهمة.</p>
+        </a>
       </div>
-      <div class="lbl">محاور معرفية</div>
-      <div class="sub">محلي · حضاري · موضوعي · إسلامي</div>
     </div>
-    <div class="stat-octagon">
-      <div class="octagon-wrap">
-        <div class="octagon-star"></div>
-        <div class="octagon-star-inner"></div>
-        <div class="num" data-count="10">٠</div>
-      </div>
-      <div class="lbl">أقسام للدرس</div>
-      <div class="sub">من النصّ إلى الأنشطة</div>
-    </div>
-    <div class="stat-octagon">
-      <div class="octagon-wrap">
-        <div class="octagon-star"></div>
-        <div class="octagon-star-inner"></div>
-        <div class="num" data-count="2">٠</div>
-      </div>
-      <div class="lbl">مساران للمحتوى</div>
-      <div class="sub">مؤلَّف وأصيل</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="manifesto-scroll"><div class="scroll-body reveal">
-  <p>كثيرون يُتقنون <span class="hl">نطق</span> الكلمات،<br>وقليلون يبلغون <span class="hl">معناها</span>.<br>وُجدت بَيَان لتعبر بالمتعلّم هذه الفجوة.</p>
-  <div class="by">— فلسفة بَيَان</div>
-</div></section>
-
-<section class="problem-premium" id="problem" dir="rtl">
-  <div class="wrap problem-premium-grid reveal">
-    
-    <!-- Column B: Decorative Visual -->
-    <div class="problem-visual-col" aria-hidden="true">
-      <div class="watermark-logo-wrap">
-        <img src="images/bayan-logo-visual.png" alt="Bayan Watermark" class="watermark-logo">
+  <section class="section">
+    <div class="wrap cta-redesign reveal">
+      <div>
+        <div class="eyebrow">ابدأ الآن</div>
+        <h2>ابدأ ببناء جيل يقرأ ليفهم.</h2>
+        <p>اطلب عرضًا تعريفيًا، فيتواصل الفريق لتحديد احتياج جهتك وتجهيز تجربة مناسبة.</p>
       </div>
-      <div class="problem-main-image-wrap">
-        <img src="images/problem.jpg" alt="Bayan Problem Visual" class="problem-main-image">
-      </div>
+      <a href="contact.html" class="btn btn-primary magnetic">اطلب عرضًا تعريفيًا</a>
     </div>
-    
-    <!-- Column A: Text Content -->
-    <div class="problem-content-col">
-      <div class="problem-eyebrow">التحدي الذي نعالجه</div>
-      <h2 class="problem-headline">ليس كل من يقرأ <span class="highlight">يفهم.</span></h2>
-      <p class="problem-sub">كثير من المتعلمين يستطيعون قراءة الكلمات ونطقها بشكل صحيح، لكنهم يواجهون صعوبة في فهم النصوص وتحليلها واستخلاص المعاني منها. هذه الفجوة لا تؤثر على اللغة العربية فقط، بل تمتد إلى جميع المواد الدراسية.</p>
-      
-      <!-- Icon Grid -->
-      <div class="problem-icons-grid">
-        <div class="problem-icon-item">
-          <div class="problem-icon-wrapper">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/><path d="M21.5 12v6"/></svg>
-          </div>
-          <div class="problem-icon-title">حاجة إلى منهج ينمي القرائية</div>
-        </div>
-        <div class="problem-icon-item">
-          <div class="problem-icon-wrapper">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          </div>
-          <div class="problem-icon-title">محتوى غير مرتبط</div>
-        </div>
-        <div class="problem-icon-item">
-          <div class="problem-icon-wrapper">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 5v14"/><path d="M12 9h4"/><path d="M12 14h-4"/></svg>
-          </div>
-          <div class="problem-icon-title">ضعف في الفهم والتحليل</div>
-        </div>
-        <div class="problem-icon-item">
-          <div class="problem-icon-wrapper">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-3"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M12 17V5"/><path d="M6 17v-4"/></svg>
-          </div>
-          <div class="problem-icon-title">تأثير على جميع المواد</div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  
-  <div class="wrap quote-container reveal">
-    <blockquote class="problem-quote">
-      «القراءة شرطٌ لازم، أمّا <span class="highlight">القرائية</span> فهي الثمرة.»
-    </blockquote>
-  </div>
-</section>
-
-
-
-<section class="sec-axes" id="axes">
-  <div class="wrap reveal">
-    <div class="sec-head reveal">
-      <div class="eyebrow inline-flex items-center gap-2 mb-4">
-        <span>المحتوى والمعايير</span>
-        <span class="red-diamond">♦</span>
-      </div>
-      <h2>أربعة محاور... <span class="highlight">نافذةٌ</span> على المعرفة والهوية</h2>
-      <p class="lead">تُعالَجُ كلُّ موضوعٍ من خلال أربعة محاور متكاملة، فلا يكون النص مادة للقراءة فحسب، بل نافذة على المعرفة والهوية.</p>
-    </div>
-    
-    <div class="axes-wrapper" style="position: relative;">
-      
-      <!-- SVG Connection Lines for Desktop (lg) -->
-      <svg class="axes-connections absolute inset-0 w-full h-full pointer-events-none hidden lg:block" viewBox="0 0 1152 400" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;">
-        <path d="M 380 120 L 480 200" stroke="#E5D8C8" stroke-width="1.2" stroke-dasharray="4 4" fill="none"></path>
-        <circle cx="480" cy="200" r="3" fill="#D8C6B6"></circle>
-        
-        <path d="M 380 380 L 480 300" stroke="#E5D8C8" stroke-width="1.2" stroke-dasharray="4 4" fill="none"></path>
-        <circle cx="480" cy="300" r="3" fill="#D8C6B6"></circle>
-        
-        <path d="M 772 120 L 672 200" stroke="#E5D8C8" stroke-width="1.2" stroke-dasharray="4 4" fill="none"></path>
-        <circle cx="672" cy="200" r="3" fill="#D8C6B6"></circle>
-        
-        <path d="M 772 380 L 672 300" stroke="#E5D8C8" stroke-width="1.2" stroke-dasharray="4 4" fill="none"></path>
-        <circle cx="672" cy="300" r="3" fill="#D8C6B6"></circle>
-      </svg>
-
-      <div class="axes-grid-container">
-        <!-- Card 1: Islamic -->
-        <div class="axis-card axis-left axis-left-top axis-green">
-          <div class="axis-badge">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" class="w-9 h-9">
-              <path d="M32 8 C30 14, 22 18, 22 26 C22 34, 42 34, 42 26 C42 18, 34 14, 32 8 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M32 4 v4" stroke-linecap="round"></path>
-              <path d="M30 4 a2 2 0 1 1 4 0" stroke-linecap="round"></path>
-              <path d="M16 34 h32 v14 h-32 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M22 48 v-6 a3 3 0 0 1 6 0 v6" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M36 48 v-6 a3 3 0 0 1 6 0 v6" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M12 54 c6 0, 16 -3, 20 0 c4 -3, 14 0, 20 0 v-4 c-6 0, -16 -3, -20 0 c-4 -3, -14 0, -20 0 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M32 50 v4" stroke-linecap="round"></path>
-            </svg>
-          </div>
-          <div class="axis-card-content">
-            <h3>الإسلامي</h3>
-            <div class="card-diamond-sep">◇</div>
-            <p>يصل المتعلم بمرجعيته الإسلامية عبر نصوصها الأصيلة: القرآن، الحديث، الفقه، السيرة، وفق ضوابط دقيقة.</p>
-          </div>
-        </div>
-
-        <!-- Card 3: Subject -->
-        <div class="axis-card axis-left axis-left-bottom axis-sky">
-          <div class="axis-badge">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" class="w-9 h-9">
-              <circle cx="38" cy="24" r="16" stroke-linecap="round" stroke-linejoin="round"></circle>
-              <path d="M22 24 h32" stroke-linecap="round"></path>
-              <path d="M38 8 a24 24 0 0 1 0 32 a24 24 0 0 1 0 -32 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M14 26 h8 L28 44 a4 4 0 0 1 -2 6 H10 a4 4 0 0 1 -2 -6 Z" fill="white" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
-              <path d="M12 34 h8" stroke-linecap="round"></path>
-              <path d="M20 54 h28 a2 2 0 0 0 2 -2 v-4 a2 2 0 0 0 -2 -2 h-28 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-          <div class="axis-card-content">
-            <h3>الموضوعي</h3>
-            <div class="card-diamond-sep">◇</div>
-            <p>معرفة منظمة عبر فرعين: العلوم والتقنية (STEM)، والإنسانيات والفنون (HASS).</p>
-          </div>
-        </div>
-
-        <!-- Column 2 (Center Circle) -->
-        <div class="axes-col-center">
-          <div class="circle-ring-dashed"></div>
-          <div class="circle-ring-solid"></div>
-          <div class="circle-bg-gradient"></div>
-          
-          <div class="center-content">
-            <img src="images/bayan-logo-visual.png" alt="Bayan Calligraphy">
-            <h4>منهجية متكاملة</h4>
-            <p>لفهم أعمق<br>وأثر أبقى</p>
-          </div>
-
-          <span class="node-dot right"></span>
-          <span class="node-dot left"></span>
-          <span class="node-diamond top"></span>
-          <span class="node-diamond bottom"></span>
-        </div>
-
-        <!-- Card 2: Cultural -->
-        <div class="axis-card axis-right axis-right-top axis-amber">
-          <div class="axis-badge">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" class="w-9 h-9">
-              <path d="M8 20 L32 8 L56 20 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M11 20 h42 v3 h-42 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M16 23 v20 M24 23 v20 M32 23 v20 M40 23 v20 M48 23 v20" stroke-linecap="round" stroke-width="2"></path>
-              <path d="M12 43 h40 v3 h-40 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M8 46 h48 v4 h-48 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-          <div class="axis-card-content">
-            <h3>الحضاري</h3>
-            <div class="card-diamond-sep">◇</div>
-            <p>نوافذ على الحضارات الكبرى: العربية الإسلامية، والرومانية، واليونانية، والهندية، والصينية.</p>
-          </div>
-        </div>
-
-        <!-- Card 4: Local -->
-        <div class="axis-card axis-right axis-right-bottom axis-orange">
-          <div class="axis-badge">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" class="w-9 h-9">
-              <path d="M16 48 V24 h8 v24 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M14 24 h12" stroke-linecap="round"></path>
-              <path d="M17 24 l3 -8 l3 8 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M20 16 v-4" stroke-linecap="round"></path>
-              <path d="M20 20 h.01 M20 28 h.01 M20 36 h.01" stroke-linecap="round" stroke-width="2"></path>
-              <path d="M24 48 v-12 a4 4 0 0 1 8 0 v12" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M32 48 h10 v-16 l-6 -6 l-4 4 Z" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M48 48 C48 38, 44 32, 44 26" stroke-linecap="round" stroke-width="2"></path>
-              <path d="M44 26 C40 22, 34 22, 34 22 C34 22, 40 25, 42 27" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M44 26 C46 20, 52 18, 52 18 C52 18, 47 22, 45 25" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M44 26 C41 20, 43 14, 43 14 C43 14, 43 20, 44 23" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M44 26 C48 24, 52 26, 52 26 C52 26, 47 26, 45 26" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-          <div class="axis-card-content">
-            <h3>المحلي</h3>
-            <div class="card-diamond-sep">◇</div>
-            <p>يربط المتعلم بهويته القطرية والعربية: الحضارة، العادات، المعالم، الفنون، والآداب المحلية.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom CTA -->
-    <div class="mt-20 text-center" style="margin-top: 60px;">
-      <a href="axes.html" class="btn-pill-cta">المحتوى والمحاور بالتفصيل ←</a>
-    </div>
-  </div>
-</section>
-
-<section class="sec bg1" id="method"><div class="wrap">
-  <div class="sec-head reveal">
-    <div class="eyebrow">المنهجية</div>
-    <h2>ستة مستويات… ومساران للمحتوى</h2>
-    <p class="lead">لا يقتصر التدرّج على طول النصّ، بل يشمل عمق الأفكار وكثافة المفردات ونوع الأسلوب ودرجة الضبط بالشكل.</p>
-  </div>
-  
-  <div class="levels-bookcase reveal">
-    <div class="shelf-books">
-      <div class="book-spine" data-lvl="1" data-title="رياض الأطفال" data-sub="سردي · ضبط كامل">
-        <div class="spine-gold-line top"></div>
-        <div class="spine-num">١</div>
-        <div class="spine-title">رياض الأطفال</div>
-        <div class="spine-gold-line bottom"></div>
-      </div>
-      <div class="book-spine" data-lvl="2" data-title="ابتدائي مبكّر" data-sub="سردي · ضبط كامل">
-        <div class="spine-gold-line top"></div>
-        <div class="spine-num">٢</div>
-        <div class="spine-title">ابتدائي مبكّر</div>
-        <div class="spine-gold-line bottom"></div>
-      </div>
-      <div class="book-spine" data-lvl="3" data-title="ابتدائي" data-sub="سردي · ضبط كامل">
-        <div class="spine-gold-line top"></div>
-        <div class="spine-num">٣</div>
-        <div class="spine-title">ابتدائي</div>
-        <div class="spine-gold-line bottom"></div>
-      </div>
-      <div class="book-spine" data-lvl="4" data-title="إعدادي" data-sub="تفسيري · ضبط أساسي">
-        <div class="spine-gold-line top"></div>
-        <div class="spine-num">٤</div>
-        <div class="spine-title">إعدادي</div>
-        <div class="spine-gold-line bottom"></div>
-      </div>
-      <div class="book-spine" data-lvl="5" data-title="ثانوي" data-sub="تفسيري · ضبط جزئي">
-        <div class="spine-gold-line top"></div>
-        <div class="spine-num">٥</div>
-        <div class="spine-title">ثانوي</div>
-        <div class="spine-gold-line bottom"></div>
-      </div>
-      <div class="book-spine" data-lvl="6" data-title="جامعي" data-sub="حجاجي · ضبط مخفّف">
-        <div class="spine-gold-line top"></div>
-        <div class="spine-num">٦</div>
-        <div class="spine-title">جامعي</div>
-        <div class="spine-gold-line bottom"></div>
-      </div>
-    </div>
-    
-    <div class="book-popover active" id="bookPopover">
-      <div class="book-popover-num" id="popoverNum">١</div>
-      <div class="book-popover-text">
-        <b id="popoverTitle">رياض الأطفال</b>
-        <p id="popoverDesc">سردي · ضبط كامل</p>
-      </div>
-    </div>
-  </div>
-  
-  <p class="reveal center" style="margin-top:34px"><a href="methodology.html" class="btn btn-line">المنهجية كاملةً ←</a></p>
-</div></section>
-
-<section class="sec bg3" id="platform"><div class="wrap">
-  <div class="sec-head reveal">
-    <div class="eyebrow">المنصة والمزايا</div>
-    <h2>بيئةٌ رقمية متكاملة تخدم كلّ دور</h2>
-    <p class="lead">المتعلّم يقرأ ويتفاعل، والمعلّم يكلّف ويقيّم ويتابع، والإدارة والوزارة ترصد الأداء على نطاقٍ واسع.</p>
-  </div>
-  
-  <div class="platform-workspace isometric-viewport reveal">
-    <div class="isometric-arch-frame">
-      <div class="arch-viewport-bg">
-        <img src="images/sol-teachers.jpg" alt="لوحة التحكم">
-      </div>
-      <div class="arch-viewport-overlay">
-        <div class="live-mockup" id="mockLesson" style="margin:0;border:none">
-          <div class="mock-browser-bar">
-            <div class="mock-dots"><span></span><span></span><span></span></div>
-            <div class="mock-title">بَيَان — واجهة الدرس القرائي</div>
-          </div>
-          <div class="mock-content" style="padding:15px">
-            <div class="mock-reading-panel">
-              <h4 style="font-size:0.95rem;margin-bottom:8px">منارة المعرفة العربية</h4>
-              <p style="font-size:0.8rem;line-height:1.6">كانت الحضارة العربية الإسلامية <span class="mock-word-hl">منارةً<span class="mock-tooltip">منارةً: مركز إشعاع وهداية فكري وحضاري.</span></span> للعلم، تسعى لربط الفكر بالعمل، وتأسيس <span class="mock-word-hl">الفهم القرائي<span class="mock-tooltip">الفهم القرائي: استخلاص المعاني الضمنية ونقد النصوص.</span></span> كأداة رئيسية <span class="mock-word-hl">لتدبّر<span class="mock-tooltip">لتدبّر: التفكر العميق واستخلاص العبر.</span></span> العلوم واستنتاج الحقائق الكونية.</p>
-            </div>
-            <div class="mock-aside-panel" style="margin-top:10px">
-              <div class="mock-q-card" style="padding:8px">
-                <p style="font-size:0.75rem;margin-bottom:6px">السؤال الأول: ما الغاية الأساسية للفهم القرائي حسب النص؟</p>
-                <div class="mock-option" data-correct style="font-size:0.72rem;padding:6px">ربط الفكر بالعمل وتدبر المعاني</div>
-                <div class="mock-option" style="font-size:0.72rem;padding:6px">حفظ ونطق الكلمات بسرعة</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="feat stagger reveal">
-      <div class="f"><div class="ic">👥</div><h3>حسابات حسب الدور</h3><p>طالب، معلّم، إدارة، وزارة — كلٌّ بصلاحياته وواجهته.</p></div>
-      <div class="f"><div class="ic">📊</div><h3>لوحات وتقارير</h3><p>تتبّع التقدّم، أداء الصفوف، وتقارير تجميعية قابلة للتصدير.</p></div>
-      <div class="f"><div class="ic">🔗</div><h3>تكامل ووصول</h3><p>تكامل LMS، دخول موحّد SSO، واستجابة كاملة للأجهزة وإتاحة.</p></div>
-    </div>
-  </div>
-  <p class="reveal center" style="margin-top:18px"><a href="platform.html" class="btn btn-line">المنصة والمزايا ←</a></p>
-</div></section>
-
-<section class="sec bg1" id="audiences"><div class="wrap">
-  <div class="sec-head reveal center" style="text-align:center;margin-bottom:36px">
-    <div class="eyebrow">لمن بَيَان؟</div>
-    <h2>حلٌّ لكلّ شريكٍ في العملية التعليمية</h2>
-  </div>
-  
-  <div class="solutions-wood stagger reveal">
-    <div class="tablet-card">
-      <div class="ic">🏫</div>
-      <h3>المدارس الخاصة</h3>
-      <p>منهجٌ قرائيٌّ متدرّج جاهز يرفع النتائج ويتكامل مع منهجك القائم.</p>
-      <a class="more" href="solutions.html">اقرأ المزيد ←</a>
-    </div>
-    <div class="tablet-card">
-      <div class="ic">🏛️</div>
-      <h3>وزارات التعليم</h3>
-      <p>حلٌّ منهجيٌّ قابل للتوسّع يُواءَم مع المراحل الوطنية بمعايير موحّدة.</p>
-      <a class="more" href="solutions.html">اقرأ المزيد ←</a>
-    </div>
-    <div class="tablet-card">
-      <div class="ic">👩‍🏫</div>
-      <h3>المعلمون</h3>
-      <p>محتوًى جاهز وتصحيحٌ تلقائي، فيتفرّغ المعلّم لتوجيه الفهم.</p>
-      <a class="more" href="solutions.html">اقرأ المزيد ←</a>
-    </div>
-    <div class="tablet-card">
-      <div class="ic">🎓</div>
-      <h3>الطلبة</h3>
-      <p>رحلةٌ بمستواهم تمامًا، ومحتوًى يربطهم بهويّتهم، وشخصيةٌ مُلهمة.</p>
-      <a class="more" href="solutions.html">اقرأ المزيد ←</a>
-    </div>
-  </div>
-</div></section>
-
-<section class="manifesto bg3"><div class="wrap reveal rigour">
-  <div class="seal">✓</div>
-  <p style="font-size:clamp(1.4rem,3.2vw,2.3rem)">«نصونُ النصّ كما وَرَد،<br>ونبني الفهمَ كما يُرام.»</p>
-  <div class="by">مراجعةٌ علمية متخصّصة قبل كلّ نشر</div>
-</div></section>
-
-<section class="cta-mihrab" id="cta"><div class="wrap">
-  <div class="mihrab-frame reveal">
-    <div>
-      <div class="eyebrow">ابدأ الآن</div>
-      <h2 style="margin-top:14px;font-family:var(--font-serif)">ابدأ ببناء جيلٍ<br>يقرأ ليفهم</h2>
-      <p style="margin-top:16px;color:var(--body)">اطلب عرضًا تعريفيًّا، فيتواصل الفريق لتحديد احتياج جهتك وتجهيز تجربةٍ مناسبة.</p>
-      <p style="margin-top:22px"><a href="contact.html" class="btn btn-primary magnetic">اطلب عرضًا تعريفيًّا <span class="arr">←</span></a></p>
-    </div>
-    <div class="horseshoe-arch-frame">
-      <div class="horseshoe-arch-inner">
-        <img src="images/personalities.jpg" onerror="this.remove()" alt="شخصيات تعليمية ملهمة">
-      </div>
-    </div>
-  </div>
-</div></section>
+  </section>
 </main>
 
-<footer><div class="wrap">
-  <div class="fcols">
-    <div><div class="brand">بَيَان</div><p>منصة القرائية العربية — حين تصبح القراءةُ فهمًا. تطوير مجموعة المتحدة للتعليم.</p></div>
-    <div><h4>استكشف</h4><a href="about.html">عن بَيَان</a><a href="methodology.html">المنهجية</a><a href="axes.html">المحتوى والمحاور</a><a href="platform.html">المنصة</a></div>
-    <div><h4>الحلول</h4><a href="solutions.html">المدارس الخاصة</a><a href="solutions.html">وزارات التعليم</a><a href="solutions.html">المعلمون</a><a href="solutions.html">الطلبة</a></div>
-    <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًّا</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/index.html">English</a>
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div><div class="brand">بَيَان</div><p>منصة القرائية العربية — حين تصبح القراءة فهمًا. تطوير مجموعة المتحدة للتعليم.</p></div>
+      <div><h4>الموقع</h4><a href="methodology.html">المنهجية</a><a href="axes.html">المحتوى والمحاور</a><a href="platform.html">المنصة</a><a href="solutions.html">الحلول</a></div>
+      <div><h4>مراجع</h4><a href="about.html">عن بَيَان</a><a href="reading-vs-literacy.html">القراءة مقابل القرائية</a><a href="faq.html">الأسئلة الشائعة</a><a href="en/index.html">English</a></div>
+      <div><h4>تواصل</h4><a href="contact.html">اطلب عرضًا تعريفيًا</a></div>
+    </div>
+    <div class="fcopy"><span>© مجموعة المتحدة للتعليم — جميع الحقوق محفوظة.</span><span>هوية بَيَان محفوظة كما هي.</span></div>
   </div>
-  <div class="fcopy"><span>© مجموعة المتحدة للتعليم — جميع الحقوق محفوظة.</span><span>نموذج تصميم — هوية بَيَان</span></div>
-</div></footer>
+</footer>
 
 <script src="assets/bayan.js"></script>
 </body>
