@@ -4977,3 +4977,43 @@ body.site-redesign .bg-motif::after{
   height:420px !important;
   opacity:.16 !important;
 }
+
+/* v13 - updated Bayan logo assets */
+body.site-redesign .brand img,
+body.premium-hero-page .brand img{
+  width:auto !important;
+  height:52px !important;
+  max-width:78px !important;
+  max-height:52px !important;
+  object-fit:contain;
+}
+
+body.site-redesign header.solid .brand img,
+body.premium-hero-page header.solid .brand img{
+  height:48px !important;
+  max-height:48px !important;
+}
+
+body.premium-hero-page .hero-watermark-logo{
+  width:auto !important;
+  height:min(620px,72vh) !important;
+  max-width:none !important;
+  object-fit:contain;
+  opacity:.045;
+}
+
+@media (max-width:860px){
+  body.site-redesign .brand img,
+  body.premium-hero-page .brand img{
+    height:46px !important;
+    max-height:46px !important;
+  }
+}
+
+@media (max-width:720px){
+  body.premium-hero-page .hero-watermark-logo{
+    width:auto !important;
+    height:min(330px,48vh) !important;
+    max-height:330px !important;
+  }
+}
